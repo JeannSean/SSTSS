@@ -8,4 +8,10 @@
     <PackageReference Include="MySql.Data.Entity" Version="6.10.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\Downloads\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\MySql.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

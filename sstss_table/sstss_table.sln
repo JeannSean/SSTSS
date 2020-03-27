@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sstss_table", "sstss_table\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing Form", "Testing Form\Testing Form.csproj", "{B28B0A0F-A81D-4473-BC44-AF250C2CBE60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBMisc", "DBMisc\DBMisc.csproj", "{8CBCBC1F-5E79-4291-B1BE-7C49CA3C7394}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBMisc", "DBMisc\DBMisc.csproj", "{8CBCBC1F-5E79-4291-B1BE-7C49CA3C7394}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

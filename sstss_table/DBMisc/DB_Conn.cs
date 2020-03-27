@@ -1,5 +1,6 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
+
 namespace DBMisc
 {
     public class DB_Conn
@@ -13,12 +14,12 @@ namespace DBMisc
             try
             {
                 cnn.Open();
-                MessageBox.Show ("Connection Open ! ");
+                Console.Write ("Connection Open ! ");
                 cnn.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Can not open connection ! ");
+                Console.Write("Can not open connection ! ");
             }
         }
 
