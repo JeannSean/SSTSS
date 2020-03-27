@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qGHEz17sMyxUK7s2QMozDbfTeTIuYARxpAmi+m26Aiy/i/3I3BocGD/Mc0D8uoVTAKhM0tRlYK9F0intHSIYeA==",
+  "dgSpecHash": "1KD5OKT0Z8GkHUOv1I80pi9HKPnnUolZ/Lb5viWrWf+lqufOSODROC6C9RAKZ6L5lRwnA6DIsjpg+m1f0DHCqw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Firefly\\Documents\\GitHub\\SSTSS\\sstss_table\\DBMisc\\DBMisc.csproj",
+  "projectFilePath": "c:\\Users\\Firefly\\Documents\\GitHub\\SSTSS\\sstss_table\\DBMisc\\DBMisc.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Firefly\\.nuget\\packages\\mysql.data.entity\\6.10.9\\mysql.data.entity.6.10.9.nupkg.sha512",
