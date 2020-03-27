@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sstss_table", "sstss_table\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing Form", "Testing Form\Testing Form.csproj", "{B28B0A0F-A81D-4473-BC44-AF250C2CBE60}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBMisc", "DBMisc\DBMisc.csproj", "{8CBCBC1F-5E79-4291-B1BE-7C49CA3C7394}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B28B0A0F-A81D-4473-BC44-AF250C2CBE60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B28B0A0F-A81D-4473-BC44-AF250C2CBE60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B28B0A0F-A81D-4473-BC44-AF250C2CBE60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CBCBC1F-5E79-4291-B1BE-7C49CA3C7394}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CBCBC1F-5E79-4291-B1BE-7C49CA3C7394}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CBCBC1F-5E79-4291-B1BE-7C49CA3C7394}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CBCBC1F-5E79-4291-B1BE-7C49CA3C7394}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

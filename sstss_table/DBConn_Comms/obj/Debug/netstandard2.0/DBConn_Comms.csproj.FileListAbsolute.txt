@@ -1,0 +1,5 @@
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\DBConn_Comms\bin\Debug\netstandard2.0\DBConn_Comms.deps.json
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\DBConn_Comms\bin\Debug\netstandard2.0\DBConn_Comms.dll
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\DBConn_Comms\obj\Debug\netstandard2.0\DBConn_Comms.csprojAssemblyReference.cache
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\DBConn_Comms\obj\Debug\netstandard2.0\DBConn_Comms.AssemblyInfoInputs.cache
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\DBConn_Comms\obj\Debug\netstandard2.0\DBConn_Comms.AssemblyInfo.cs

@@ -1,0 +1,4 @@
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\DBMisc\bin\Debug\netstandard2.0\DBMisc.deps.json
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\DBMisc\bin\Debug\netstandard2.0\DBMisc.dll
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\DBMisc\obj\Debug\netstandard2.0\DBMisc.AssemblyInfoInputs.cache
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\DBMisc\obj\Debug\netstandard2.0\DBMisc.AssemblyInfo.cs
