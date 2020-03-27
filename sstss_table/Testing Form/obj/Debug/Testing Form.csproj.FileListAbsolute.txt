@@ -1,0 +1,10 @@
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Testing Form.exe.config
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Testing Form.exe
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Testing Form.pdb
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testing Form.csprojAssemblyReference.cache
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testing_Form.Properties.Resources.resources
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testing Form.csproj.GenerateResource.cache
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testing Form.csproj.CoreCompileInputs.cache
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testing Form.exe
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testing Form.pdb
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testing_Form.Form1.resources
