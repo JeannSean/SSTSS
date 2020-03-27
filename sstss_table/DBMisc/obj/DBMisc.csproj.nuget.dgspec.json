@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Firefly\\Documents\\GitHub\\SSTSS\\sstss_table\\DBMisc\\DBMisc.csproj": {}
+    "C:\\Users\\Firefly\\Documents\\GitHub\\SSTSS\\sstss_table\\DBMisc\\DBMisc.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Firefly\\Documents\\GitHub\\SSTSS\\sstss_table\\DBMisc\\DBMisc.csproj": {
+    "C:\\Users\\Firefly\\Documents\\GitHub\\SSTSS\\sstss_table\\DBMisc\\DBMisc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Firefly\\Documents\\GitHub\\SSTSS\\sstss_table\\DBMisc\\DBMisc.csproj",
+        "projectUniqueName": "C:\\Users\\Firefly\\Documents\\GitHub\\SSTSS\\sstss_table\\DBMisc\\DBMisc.csproj",
         "projectName": "DBMisc",
-        "projectPath": "c:\\Users\\Firefly\\Documents\\GitHub\\SSTSS\\sstss_table\\DBMisc\\DBMisc.csproj",
+        "projectPath": "C:\\Users\\Firefly\\Documents\\GitHub\\SSTSS\\sstss_table\\DBMisc\\DBMisc.csproj",
         "packagesPath": "C:\\Users\\Firefly\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Firefly\\Documents\\GitHub\\SSTSS\\sstss_table\\DBMisc\\obj\\",
+        "outputPath": "C:\\Users\\Firefly\\Documents\\GitHub\\SSTSS\\sstss_table\\DBMisc\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Data;
+using System.Data.Common;
+using System.Collections.Generic;
+using System.Text;
 using MySql.Data.MySqlClient;
 
 namespace DBMisc
