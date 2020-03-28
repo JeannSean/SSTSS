@@ -1,0 +1,9 @@
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\db_miscs\obj\Debug\netstandard2.0\db_miscs.csprojAssemblyReference.cache
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\db_miscs\obj\Debug\netstandard2.0\db_miscs.csproj.CoreCompileInputs.cache
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\db_miscs\obj\Debug\netstandard2.0\db_miscs.AssemblyInfoInputs.cache
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\db_miscs\obj\Debug\netstandard2.0\db_miscs.AssemblyInfo.cs
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\db_miscs\bin\Debug\netstandard2.0\db_miscs.deps.json
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\db_miscs\bin\Debug\netstandard2.0\db_miscs.dll
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\db_miscs\bin\Debug\netstandard2.0\db_miscs.pdb
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\db_miscs\obj\Debug\netstandard2.0\db_miscs.dll
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\db_miscs\obj\Debug\netstandard2.0\db_miscs.pdb

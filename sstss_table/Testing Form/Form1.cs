@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using db_misc;
 namespace Testing_Form
 {
     public partial class Form1 : Form
@@ -20,6 +20,22 @@ namespace Testing_Form
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dbCmmnds getD = new dbCmmnds();
+            Test_text.Text = getD.getData("SELECT * FROM `sstss_data`.`tbl_degree` WHERE `description`= 'Masters'");
         }
     }
 }

@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\db_miscs\db_miscs.csproj">
+      <Project>{955875dd-7a05-4532-9d81-17436390ab1e}</Project>
+      <Name>db_miscs</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

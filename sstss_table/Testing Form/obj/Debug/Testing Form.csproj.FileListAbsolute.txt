@@ -8,3 +8,6 @@ C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testi
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testing Form.exe
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testing Form.pdb
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testing_Form.Form1.resources
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\db_miscs.dll
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\db_miscs.pdb
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testing Form.csproj.CopyComplete
