@@ -5,22 +5,24 @@ namespace db_misc
     public class dbCmmnds
     {
 
-        public void getData()
+        public void addData(String query)
         {
             MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=sstss_data;password=sstssthor");
             try
-            {
-                Console.WriteLine("Connecting.........");
+            {            
                 conn.Open();
-                Console.WriteLine("Connection Success!");
-                conn.Close();
-
+                string stm = query;   
+                MySqlCommand cmd = new MySqlCommand(stm, conn);
+                cmd.ExecuteNonQuery();
+                                
             }
             catch (Exception e)
             {
                 Console.WriteLine("Connection Failed!");
                 Console.WriteLine(e.Message);
             }
+            conn.Close();
+            Console.WriteLine("Data Added!");
         }
 
         public string getData(String query){
@@ -57,6 +59,20 @@ namespace db_misc
         }
         _______________________________ 
         
+            MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=sstss_data;password=sstssthor");
+            try
+            {
+                Console.WriteLine("Connecting.........");
+                conn.Open();
+                Console.WriteLine("Connection Success!");
+                conn.Close();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Connection Failed!");
+                Console.WriteLine(e.Message);
+            }
         */
 
         
