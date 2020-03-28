@@ -76,10 +76,10 @@
             this.table_container.Location = new System.Drawing.Point(0, 0);
             this.table_container.Margin = new System.Windows.Forms.Padding(2);
             this.table_container.Name = "table_container";
-            this.table_container.Padding = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.table_container.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.table_container.ShadowColor = System.Drawing.Color.Black;
             this.table_container.ShadowDepth = 200;
-            this.table_container.Size = new System.Drawing.Size(968, 474);
+            this.table_container.Size = new System.Drawing.Size(973, 474);
             this.table_container.TabIndex = 0;
             // 
             // monday_display_cntnr
@@ -109,7 +109,7 @@
             this.gunaShadowPanel1.BaseColor = System.Drawing.SystemColors.ButtonShadow;
             this.gunaShadowPanel1.Controls.Add(this.monday_display_cntnr);
             this.gunaShadowPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gunaShadowPanel1.Location = new System.Drawing.Point(1, 2);
+            this.gunaShadowPanel1.Location = new System.Drawing.Point(3, 2);
             this.gunaShadowPanel1.Name = "gunaShadowPanel1";
             this.gunaShadowPanel1.Padding = new System.Windows.Forms.Padding(3);
             this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.Black;
@@ -124,7 +124,7 @@
             this.gunaShadowPanel2.BaseColor = System.Drawing.SystemColors.ButtonShadow;
             this.gunaShadowPanel2.Controls.Add(this.gunaPanel1);
             this.gunaShadowPanel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gunaShadowPanel2.Location = new System.Drawing.Point(162, 2);
+            this.gunaShadowPanel2.Location = new System.Drawing.Point(164, 2);
             this.gunaShadowPanel2.Name = "gunaShadowPanel2";
             this.gunaShadowPanel2.Padding = new System.Windows.Forms.Padding(3);
             this.gunaShadowPanel2.ShadowColor = System.Drawing.Color.Black;
@@ -160,7 +160,7 @@
             this.gunaShadowPanel3.BaseColor = System.Drawing.SystemColors.ButtonShadow;
             this.gunaShadowPanel3.Controls.Add(this.gunaPanel2);
             this.gunaShadowPanel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gunaShadowPanel3.Location = new System.Drawing.Point(323, 2);
+            this.gunaShadowPanel3.Location = new System.Drawing.Point(325, 2);
             this.gunaShadowPanel3.Name = "gunaShadowPanel3";
             this.gunaShadowPanel3.Padding = new System.Windows.Forms.Padding(3);
             this.gunaShadowPanel3.ShadowColor = System.Drawing.Color.Black;
@@ -196,7 +196,7 @@
             this.gunaShadowPanel4.BaseColor = System.Drawing.SystemColors.ButtonShadow;
             this.gunaShadowPanel4.Controls.Add(this.gunaPanel3);
             this.gunaShadowPanel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gunaShadowPanel4.Location = new System.Drawing.Point(483, 2);
+            this.gunaShadowPanel4.Location = new System.Drawing.Point(485, 2);
             this.gunaShadowPanel4.Name = "gunaShadowPanel4";
             this.gunaShadowPanel4.Padding = new System.Windows.Forms.Padding(3);
             this.gunaShadowPanel4.ShadowColor = System.Drawing.Color.Black;
@@ -232,7 +232,7 @@
             this.gunaShadowPanel5.BaseColor = System.Drawing.SystemColors.ButtonShadow;
             this.gunaShadowPanel5.Controls.Add(this.gunaPanel4);
             this.gunaShadowPanel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gunaShadowPanel5.Location = new System.Drawing.Point(644, 2);
+            this.gunaShadowPanel5.Location = new System.Drawing.Point(646, 2);
             this.gunaShadowPanel5.Name = "gunaShadowPanel5";
             this.gunaShadowPanel5.Padding = new System.Windows.Forms.Padding(3);
             this.gunaShadowPanel5.ShadowColor = System.Drawing.Color.Black;
@@ -268,7 +268,7 @@
             this.gunaShadowPanel6.BaseColor = System.Drawing.SystemColors.ButtonShadow;
             this.gunaShadowPanel6.Controls.Add(this.gunaPanel5);
             this.gunaShadowPanel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gunaShadowPanel6.Location = new System.Drawing.Point(805, 2);
+            this.gunaShadowPanel6.Location = new System.Drawing.Point(807, 2);
             this.gunaShadowPanel6.Name = "gunaShadowPanel6";
             this.gunaShadowPanel6.Padding = new System.Windows.Forms.Padding(3);
             this.gunaShadowPanel6.ShadowColor = System.Drawing.Color.Black;
@@ -302,7 +302,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(968, 474);
+            this.ClientSize = new System.Drawing.Size(973, 474);
             this.Controls.Add(this.table_container);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
