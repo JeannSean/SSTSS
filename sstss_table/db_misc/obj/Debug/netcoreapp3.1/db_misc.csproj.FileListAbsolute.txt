@@ -1,9 +1,0 @@
-C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\db_misc\bin\Debug\netcoreapp3.1\db_misc.deps.json
-C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\db_misc\bin\Debug\netcoreapp3.1\db_misc.dll
-C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\db_misc\bin\Debug\netcoreapp3.1\db_misc.pdb
-C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\db_misc\obj\Debug\netcoreapp3.1\db_misc.csprojAssemblyReference.cache
-C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\db_misc\obj\Debug\netcoreapp3.1\db_misc.AssemblyInfoInputs.cache
-C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\db_misc\obj\Debug\netcoreapp3.1\db_misc.AssemblyInfo.cs
-C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\db_misc\obj\Debug\netcoreapp3.1\db_misc.dll
-C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\db_misc\obj\Debug\netcoreapp3.1\db_misc.pdb
-C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\db_misc\obj\Debug\netcoreapp3.1\db_misc.csproj.CoreCompileInputs.cache

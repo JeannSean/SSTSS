@@ -5,7 +5,7 @@ namespace db_misc
     public class dbCmmnds
     {
 
-        static void Main(string[] args)
+        public void getData()
         {
             MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=sstss_data;password=sstssthor");
             try
