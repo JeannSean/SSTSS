@@ -34,9 +34,8 @@ namespace Testing_Form
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dbCmmnds getD = new dbCmmnds();
-            getD.getData();
-            Test_text.Text = "";
+            dbCmmnds getD = new dbCmmnds();            
+            Test_text.Text = getD.getData("SELECT `description` FROM `sstss_data`.`tbl_degree` WHERE `description`= 'Masters'");
         }
     }
 }
