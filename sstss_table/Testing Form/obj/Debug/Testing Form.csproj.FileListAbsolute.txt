@@ -19,3 +19,10 @@ C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\DB_mi
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\MySql.Data.xml
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Google.Protobuf.xml
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Renci.SshNet.xml
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Guna.UI.dll
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Bunifu.Core.dll
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.xml
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Bunifu_UI_v1.5.3.xml
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testing Form.exe.config
