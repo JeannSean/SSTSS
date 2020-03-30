@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using db_misc;
-namespace Testing_Form
+
+namespace test1
 {
     public partial class Form1 : Form
     {
@@ -16,11 +16,5 @@ namespace Testing_Form
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
     }
 }
