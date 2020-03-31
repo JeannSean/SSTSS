@@ -19,12 +19,13 @@ namespace Testing_Form.Controls
         private string v_stime;
         private string v_etime;
         private string v_room;
-
+        private string v_class;
         public string subcode { get { return v_subcode; } set { v_subcode = value; } }
         public string instructor { get { return v_instrctr; } set { v_instrctr = value; } }
         public string start_time { get { return v_stime; } set { v_stime = value; } }
         public string end_time { get { return v_etime; } set { v_etime = value; } }
         public string room { get { return v_room; } set { v_room = value; } }
+        public string section { get { return v_class; } set { v_class = value; } }
 
         /// </summary>
 
@@ -53,9 +54,8 @@ namespace Testing_Form.Controls
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
-            Edit_box calledbox = new Edit_box();
-
-            calledbox.subcode="CC101";
+            string[] data = {subcode, instructor, start_time, end_time, room, section };
+            Edit_box calledbox = new Edit_box(data);
             calledbox.ShowDialog();
 
         }

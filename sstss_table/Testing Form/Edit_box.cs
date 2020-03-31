@@ -20,37 +20,42 @@ namespace Testing_Form
         private static string v_etime;
         private static string v_room;
 
-        internal string subcode{ get { return v_subcode; } set { v_subcode = value; } }
+        internal string subcode{ get { return v_subcode; } set { v_subcode = value;  } }
         internal string instructor { get { return v_instrctr; } set { v_instrctr = value; } }
         internal string start_time { get { return v_stime; } set { v_stime = value; } }
         internal string end_time { get { return v_etime; } set { v_etime = value; } }
         internal string room { get { return v_room; } set { v_room = value; } }
         
-        /// </summary>
-        public Edit_box()
-        {
+        /// </summary>/
+        public Edit_box(string[] data)
+        {            
+            //  0 - subcode
+            //  1 - insrtructor 
+            //  2 - start time
+            //  3 - end time
+            //  4 - room
+            //  5 - section(hidden)
             InitializeComponent();
-            Console.WriteLine(subcode+" data thrown");
-            if (subcode != null)
-            {                
-                subject_code_textbox.Text = subcode;
-                
-            }
-            if (instructor !=null)
+            if (data[0] != null)
             {
-                instructor_dropdown.Text = instructor;
+                subject_code_textbox.Text = data[0];
+
             }
-            if (start_time != null)
+            if (data[1] != null)
             {
-                start_time_dropdown.Text = start_time;
+                instructor_dropdown.Text = data[1];
             }
-            if (end_time != null)
+            if (data[2] != null)
             {
-                end_time_dropdown.Text = end_time;
+                start_time_dropdown.Text = data[2];
             }
-            if (room != null)
+            if (data[3] != null)
             {
-                room_dropdown.Text = room;
+                end_time_dropdown.Text = data[3];
+            }
+            if (data[4] != null)
+            {
+                room_dropdown.Text = data[4];
             }
 
 
