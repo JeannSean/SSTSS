@@ -38,3 +38,5 @@ C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testi
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.xml
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testing_Form.Edit_box.resources
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.dll
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.xml

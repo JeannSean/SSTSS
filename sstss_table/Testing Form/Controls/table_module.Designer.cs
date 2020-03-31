@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(table_module));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.table_container = new Guna.UI.WinForms.GunaShadowPanel();
             this.gunaShadowPanel6 = new Guna.UI.WinForms.GunaShadowPanel();
             this.gunaPanel5 = new Guna.UI.WinForms.GunaPanel();
@@ -45,9 +49,9 @@
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.monday_cntnr = new Guna.UI.WinForms.GunaShadowPanel();
-            this.button1 = new System.Windows.Forms.Button();
             this.monday_display_cntnr = new Guna.UI.WinForms.GunaPanel();
             this.moday_label = new Guna.UI.WinForms.GunaLabel();
+            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.table_container.SuspendLayout();
             this.gunaShadowPanel6.SuspendLayout();
             this.gunaPanel5.SuspendLayout();
@@ -80,7 +84,7 @@
             this.table_container.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.table_container.ShadowColor = System.Drawing.Color.Black;
             this.table_container.ShadowDepth = 200;
-            this.table_container.Size = new System.Drawing.Size(973, 474);
+            this.table_container.Size = new System.Drawing.Size(973, 539);
             this.table_container.TabIndex = 4;
             // 
             // gunaShadowPanel6
@@ -95,7 +99,7 @@
             this.gunaShadowPanel6.ShadowColor = System.Drawing.Color.Black;
             this.gunaShadowPanel6.ShadowDepth = 200;
             this.gunaShadowPanel6.ShadowShift = 2;
-            this.gunaShadowPanel6.Size = new System.Drawing.Size(161, 470);
+            this.gunaShadowPanel6.Size = new System.Drawing.Size(161, 535);
             this.gunaShadowPanel6.TabIndex = 15;
             // 
             // gunaPanel5
@@ -131,7 +135,7 @@
             this.gunaShadowPanel5.ShadowColor = System.Drawing.Color.Black;
             this.gunaShadowPanel5.ShadowDepth = 200;
             this.gunaShadowPanel5.ShadowShift = 2;
-            this.gunaShadowPanel5.Size = new System.Drawing.Size(161, 470);
+            this.gunaShadowPanel5.Size = new System.Drawing.Size(161, 535);
             this.gunaShadowPanel5.TabIndex = 14;
             // 
             // gunaPanel4
@@ -167,7 +171,7 @@
             this.gunaShadowPanel4.ShadowColor = System.Drawing.Color.Black;
             this.gunaShadowPanel4.ShadowDepth = 200;
             this.gunaShadowPanel4.ShadowShift = 2;
-            this.gunaShadowPanel4.Size = new System.Drawing.Size(161, 470);
+            this.gunaShadowPanel4.Size = new System.Drawing.Size(161, 535);
             this.gunaShadowPanel4.TabIndex = 13;
             // 
             // gunaPanel3
@@ -203,7 +207,7 @@
             this.gunaShadowPanel3.ShadowColor = System.Drawing.Color.Black;
             this.gunaShadowPanel3.ShadowDepth = 200;
             this.gunaShadowPanel3.ShadowShift = 2;
-            this.gunaShadowPanel3.Size = new System.Drawing.Size(160, 470);
+            this.gunaShadowPanel3.Size = new System.Drawing.Size(160, 535);
             this.gunaShadowPanel3.TabIndex = 12;
             // 
             // gunaPanel2
@@ -239,7 +243,7 @@
             this.gunaShadowPanel2.ShadowColor = System.Drawing.Color.Black;
             this.gunaShadowPanel2.ShadowDepth = 200;
             this.gunaShadowPanel2.ShadowShift = 2;
-            this.gunaShadowPanel2.Size = new System.Drawing.Size(161, 470);
+            this.gunaShadowPanel2.Size = new System.Drawing.Size(161, 535);
             this.gunaShadowPanel2.TabIndex = 11;
             // 
             // gunaPanel1
@@ -267,7 +271,7 @@
             // 
             this.monday_cntnr.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.monday_cntnr.BaseColor = System.Drawing.SystemColors.ButtonShadow;
-            this.monday_cntnr.Controls.Add(this.button1);
+            this.monday_cntnr.Controls.Add(this.bunifuButton1);
             this.monday_cntnr.Controls.Add(this.monday_display_cntnr);
             this.monday_cntnr.Dock = System.Windows.Forms.DockStyle.Left;
             this.monday_cntnr.Location = new System.Drawing.Point(3, 2);
@@ -276,19 +280,8 @@
             this.monday_cntnr.ShadowColor = System.Drawing.Color.Black;
             this.monday_cntnr.ShadowDepth = 200;
             this.monday_cntnr.ShadowShift = 2;
-            this.monday_cntnr.Size = new System.Drawing.Size(161, 470);
+            this.monday_cntnr.Size = new System.Drawing.Size(161, 535);
             this.monday_cntnr.TabIndex = 10;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Location = new System.Drawing.Point(3, 45);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // monday_display_cntnr
             // 
@@ -311,13 +304,81 @@
             this.moday_label.Text = "Monday";
             this.moday_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // bunifuButton1
+            // 
+            this.bunifuButton1.AllowToggling = false;
+            this.bunifuButton1.AnimationSpeed = 200;
+            this.bunifuButton1.AutoGenerateColors = false;
+            this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButton1.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
+            this.bunifuButton1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.bunifuButton1.ButtonText = "ADD";
+            this.bunifuButton1.ButtonTextMarginLeft = 0;
+            this.bunifuButton1.ColorContrastOnClick = 45;
+            this.bunifuButton1.ColorContrastOnHover = 45;
+            this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.bunifuButton1.CustomizableEdges = borderEdges2;
+            this.bunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuButton1.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.bunifuButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuButton1.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.bunifuButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.bunifuButton1.ForeColor = System.Drawing.Color.White;
+            this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuButton1.IconMarginLeft = 11;
+            this.bunifuButton1.IconPadding = 10;
+            this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton1.IdleBorderRadius = 3;
+            this.bunifuButton1.IdleBorderThickness = 1;
+            this.bunifuButton1.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton1.IdleIconLeftImage = null;
+            this.bunifuButton1.IdleIconRightImage = null;
+            this.bunifuButton1.IndicateFocus = false;
+            this.bunifuButton1.Location = new System.Drawing.Point(3, 45);
+            this.bunifuButton1.Name = "bunifuButton1";
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.BorderRadius = 3;
+            stateProperties3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties3.BorderThickness = 1;
+            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.ForeColor = System.Drawing.Color.White;
+            stateProperties3.IconLeftImage = null;
+            stateProperties3.IconRightImage = null;
+            this.bunifuButton1.onHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties4.BorderRadius = 3;
+            stateProperties4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties4.BorderThickness = 1;
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties4.ForeColor = System.Drawing.Color.White;
+            stateProperties4.IconLeftImage = null;
+            stateProperties4.IconRightImage = null;
+            this.bunifuButton1.OnPressedState = stateProperties4;
+            this.bunifuButton1.Size = new System.Drawing.Size(155, 35);
+            this.bunifuButton1.TabIndex = 2;
+            this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton1.TextMarginLeft = 0;
+            this.bunifuButton1.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
+            // 
             // table_module
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.Controls.Add(this.table_container);
+            this.MaximumSize = new System.Drawing.Size(973, 863);
+            this.MinimumSize = new System.Drawing.Size(973, 539);
             this.Name = "table_module";
-            this.Size = new System.Drawing.Size(973, 474);
+            this.Size = new System.Drawing.Size(973, 539);
             this.table_container.ResumeLayout(false);
             this.gunaShadowPanel6.ResumeLayout(false);
             this.gunaPanel5.ResumeLayout(false);
@@ -360,8 +421,8 @@
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaShadowPanel monday_cntnr;
-        private System.Windows.Forms.Button button1;
         private Guna.UI.WinForms.GunaPanel monday_display_cntnr;
         private Guna.UI.WinForms.GunaLabel moday_label;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
     }
 }

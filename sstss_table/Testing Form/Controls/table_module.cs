@@ -17,8 +17,14 @@ namespace Testing_Form.Controls
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void bunifuButton1_Click(object sender, EventArgs e)
         {
+            Class_box cbc = new Class_box();
+            monday_cntnr.Controls.Add(cbc);
+            cbc.Dock = DockStyle.Top;
+            monday_cntnr.Controls.SetChildIndex(cbc, 1);
+            
+
 
         }
     }

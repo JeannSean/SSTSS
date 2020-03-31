@@ -32,12 +32,12 @@
             this.class_panel = new Guna.UI.WinForms.GunaShadowPanel();
             this.class_panel_cntnr = new System.Windows.Forms.Panel();
             this.button_cntnr = new System.Windows.Forms.Panel();
-            this.gunaLineTextBox1 = new Guna.UI.WinForms.GunaLineTextBox();
+            this.bunifuImageButton2 = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.subject_box = new Guna.UI.WinForms.GunaLineTextBox();
             this.instructor_box = new Guna.UI.WinForms.GunaLineTextBox();
             this.time_box = new Guna.UI.WinForms.GunaLineTextBox();
             this.room_box = new Guna.UI.WinForms.GunaLineTextBox();
-            this.bunifuImageButton2 = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.class_panel.SuspendLayout();
             this.class_panel_cntnr.SuspendLayout();
             this.button_cntnr.SuspendLayout();
@@ -63,7 +63,7 @@
             // 
             this.class_panel_cntnr.BackColor = System.Drawing.Color.DimGray;
             this.class_panel_cntnr.Controls.Add(this.button_cntnr);
-            this.class_panel_cntnr.Controls.Add(this.gunaLineTextBox1);
+            this.class_panel_cntnr.Controls.Add(this.subject_box);
             this.class_panel_cntnr.Controls.Add(this.instructor_box);
             this.class_panel_cntnr.Controls.Add(this.time_box);
             this.class_panel_cntnr.Controls.Add(this.room_box);
@@ -83,78 +83,6 @@
             this.button_cntnr.Name = "button_cntnr";
             this.button_cntnr.Size = new System.Drawing.Size(157, 21);
             this.button_cntnr.TabIndex = 13;
-            // 
-            // gunaLineTextBox1
-            // 
-            this.gunaLineTextBox1.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.gunaLineTextBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gunaLineTextBox1.FocusedLineColor = System.Drawing.Color.Transparent;
-            this.gunaLineTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLineTextBox1.LineColor = System.Drawing.Color.Transparent;
-            this.gunaLineTextBox1.Location = new System.Drawing.Point(0, 22);
-            this.gunaLineTextBox1.Name = "gunaLineTextBox1";
-            this.gunaLineTextBox1.PasswordChar = '\0';
-            this.gunaLineTextBox1.ReadOnly = true;
-            this.gunaLineTextBox1.SelectedText = "";
-            this.gunaLineTextBox1.Size = new System.Drawing.Size(157, 40);
-            this.gunaLineTextBox1.TabIndex = 12;
-            this.gunaLineTextBox1.Text = "Subject";
-            this.gunaLineTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // instructor_box
-            // 
-            this.instructor_box.BackColor = System.Drawing.Color.White;
-            this.instructor_box.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.instructor_box.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.instructor_box.FocusedLineColor = System.Drawing.Color.Transparent;
-            this.instructor_box.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.instructor_box.LineColor = System.Drawing.Color.Transparent;
-            this.instructor_box.Location = new System.Drawing.Point(0, 62);
-            this.instructor_box.Name = "instructor_box";
-            this.instructor_box.PasswordChar = '\0';
-            this.instructor_box.ReadOnly = true;
-            this.instructor_box.SelectedText = "";
-            this.instructor_box.Size = new System.Drawing.Size(157, 40);
-            this.instructor_box.TabIndex = 7;
-            this.instructor_box.Text = "Instructor";
-            this.instructor_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // time_box
-            // 
-            this.time_box.BackColor = System.Drawing.Color.White;
-            this.time_box.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.time_box.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.time_box.FocusedLineColor = System.Drawing.Color.Transparent;
-            this.time_box.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.time_box.LineColor = System.Drawing.Color.Transparent;
-            this.time_box.Location = new System.Drawing.Point(0, 102);
-            this.time_box.Name = "time_box";
-            this.time_box.PasswordChar = '\0';
-            this.time_box.ReadOnly = true;
-            this.time_box.SelectedText = "";
-            this.time_box.Size = new System.Drawing.Size(157, 29);
-            this.time_box.TabIndex = 8;
-            this.time_box.Text = "00:00-00:00";
-            this.time_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // room_box
-            // 
-            this.room_box.BackColor = System.Drawing.Color.White;
-            this.room_box.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.room_box.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.room_box.FocusedLineColor = System.Drawing.Color.Transparent;
-            this.room_box.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.room_box.LineColor = System.Drawing.Color.Transparent;
-            this.room_box.Location = new System.Drawing.Point(0, 131);
-            this.room_box.Name = "room_box";
-            this.room_box.PasswordChar = '\0';
-            this.room_box.ReadOnly = true;
-            this.room_box.SelectedText = "";
-            this.room_box.Size = new System.Drawing.Size(157, 27);
-            this.room_box.TabIndex = 9;
-            this.room_box.Text = "Room101";
-            this.room_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // bunifuImageButton2
             // 
@@ -220,6 +148,79 @@
             this.bunifuImageButton1.WaitOnLoad = false;
             this.bunifuImageButton1.Zoom = 40;
             this.bunifuImageButton1.ZoomSpeed = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            // 
+            // subject_box
+            // 
+            this.subject_box.BackColor = System.Drawing.Color.White;
+            this.subject_box.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.subject_box.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.subject_box.FocusedLineColor = System.Drawing.Color.Transparent;
+            this.subject_box.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.subject_box.LineColor = System.Drawing.Color.Transparent;
+            this.subject_box.Location = new System.Drawing.Point(0, 22);
+            this.subject_box.Name = "subject_box";
+            this.subject_box.PasswordChar = '\0';
+            this.subject_box.ReadOnly = true;
+            this.subject_box.SelectedText = "";
+            this.subject_box.Size = new System.Drawing.Size(157, 40);
+            this.subject_box.TabIndex = 12;
+            this.subject_box.Text = "Subject";
+            this.subject_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // instructor_box
+            // 
+            this.instructor_box.BackColor = System.Drawing.Color.White;
+            this.instructor_box.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.instructor_box.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.instructor_box.FocusedLineColor = System.Drawing.Color.Transparent;
+            this.instructor_box.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.instructor_box.LineColor = System.Drawing.Color.Transparent;
+            this.instructor_box.Location = new System.Drawing.Point(0, 62);
+            this.instructor_box.Name = "instructor_box";
+            this.instructor_box.PasswordChar = '\0';
+            this.instructor_box.ReadOnly = true;
+            this.instructor_box.SelectedText = "";
+            this.instructor_box.Size = new System.Drawing.Size(157, 40);
+            this.instructor_box.TabIndex = 7;
+            this.instructor_box.Text = "Instructor";
+            this.instructor_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // time_box
+            // 
+            this.time_box.BackColor = System.Drawing.Color.White;
+            this.time_box.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.time_box.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.time_box.FocusedLineColor = System.Drawing.Color.Transparent;
+            this.time_box.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.time_box.LineColor = System.Drawing.Color.Transparent;
+            this.time_box.Location = new System.Drawing.Point(0, 102);
+            this.time_box.Name = "time_box";
+            this.time_box.PasswordChar = '\0';
+            this.time_box.ReadOnly = true;
+            this.time_box.SelectedText = "";
+            this.time_box.Size = new System.Drawing.Size(157, 29);
+            this.time_box.TabIndex = 8;
+            this.time_box.Text = "00:00-00:00";
+            this.time_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // room_box
+            // 
+            this.room_box.BackColor = System.Drawing.Color.White;
+            this.room_box.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.room_box.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.room_box.FocusedLineColor = System.Drawing.Color.Transparent;
+            this.room_box.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.room_box.LineColor = System.Drawing.Color.Transparent;
+            this.room_box.Location = new System.Drawing.Point(0, 131);
+            this.room_box.Name = "room_box";
+            this.room_box.PasswordChar = '\0';
+            this.room_box.ReadOnly = true;
+            this.room_box.SelectedText = "";
+            this.room_box.Size = new System.Drawing.Size(157, 27);
+            this.room_box.TabIndex = 9;
+            this.room_box.Text = "Room101";
+            this.room_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Class_box
             // 
@@ -243,7 +244,7 @@
         private System.Windows.Forms.Panel button_cntnr;
         private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton2;
         private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton1;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox1;
+        private Guna.UI.WinForms.GunaLineTextBox subject_box;
         private Guna.UI.WinForms.GunaLineTextBox instructor_box;
         private Guna.UI.WinForms.GunaLineTextBox time_box;
         private Guna.UI.WinForms.GunaLineTextBox room_box;

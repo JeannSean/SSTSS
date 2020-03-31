@@ -37,14 +37,15 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuDropdown4 = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.bunifuDropdown3 = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.bunifuDropdown2 = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.bunifuDropdown1 = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.start_time_dropdown = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.room_dropdown = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.end_time_dropdown = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.instructor_dropdown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.subject_code_display = new Guna.UI.WinForms.GunaLineTextBox();
-            this.subject_code_textbox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.button_discard = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.button_save = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.subject_code_textbox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.gunaShadowPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -64,10 +65,11 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.bunifuDropdown4);
-            this.panel1.Controls.Add(this.bunifuDropdown3);
-            this.panel1.Controls.Add(this.bunifuDropdown2);
-            this.panel1.Controls.Add(this.bunifuDropdown1);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.start_time_dropdown);
+            this.panel1.Controls.Add(this.room_dropdown);
+            this.panel1.Controls.Add(this.end_time_dropdown);
+            this.panel1.Controls.Add(this.instructor_dropdown);
             this.panel1.Controls.Add(this.subject_code_display);
             this.panel1.Controls.Add(this.button_discard);
             this.panel1.Controls.Add(this.button_save);
@@ -78,121 +80,128 @@
             this.panel1.Size = new System.Drawing.Size(331, 318);
             this.panel1.TabIndex = 1;
             // 
-            // bunifuDropdown4
+            // textBox1
             // 
-            this.bunifuDropdown4.BackColor = System.Drawing.Color.White;
-            this.bunifuDropdown4.BorderRadius = 1;
-            this.bunifuDropdown4.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.bunifuDropdown4.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.bunifuDropdown4.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
-            this.bunifuDropdown4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.bunifuDropdown4.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.bunifuDropdown4.FillDropDown = false;
-            this.bunifuDropdown4.FillIndicator = false;
-            this.bunifuDropdown4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bunifuDropdown4.ForeColor = System.Drawing.Color.Purple;
-            this.bunifuDropdown4.FormattingEnabled = true;
-            this.bunifuDropdown4.Icon = null;
-            this.bunifuDropdown4.IndicatorColor = System.Drawing.Color.Purple;
-            this.bunifuDropdown4.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.bunifuDropdown4.ItemBackColor = System.Drawing.Color.White;
-            this.bunifuDropdown4.ItemBorderColor = System.Drawing.Color.White;
-            this.bunifuDropdown4.ItemForeColor = System.Drawing.Color.Purple;
-            this.bunifuDropdown4.ItemHeight = 26;
-            this.bunifuDropdown4.ItemHighLightColor = System.Drawing.Color.Thistle;
-            this.bunifuDropdown4.Location = new System.Drawing.Point(64, 179);
-            this.bunifuDropdown4.Name = "bunifuDropdown4";
-            this.bunifuDropdown4.Size = new System.Drawing.Size(100, 32);
-            this.bunifuDropdown4.TabIndex = 19;
-            this.bunifuDropdown4.Text = "Starting time";
+            this.textBox1.Location = new System.Drawing.Point(-19, -19);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 20;
             // 
-            // bunifuDropdown3
+            // start_time_dropdown
             // 
-            this.bunifuDropdown3.BackColor = System.Drawing.Color.White;
-            this.bunifuDropdown3.BorderRadius = 1;
-            this.bunifuDropdown3.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.bunifuDropdown3.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.bunifuDropdown3.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
-            this.bunifuDropdown3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.bunifuDropdown3.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.bunifuDropdown3.FillDropDown = false;
-            this.bunifuDropdown3.FillIndicator = false;
-            this.bunifuDropdown3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bunifuDropdown3.ForeColor = System.Drawing.Color.Purple;
-            this.bunifuDropdown3.FormattingEnabled = true;
-            this.bunifuDropdown3.Icon = null;
-            this.bunifuDropdown3.IndicatorColor = System.Drawing.Color.Purple;
-            this.bunifuDropdown3.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.bunifuDropdown3.ItemBackColor = System.Drawing.Color.White;
-            this.bunifuDropdown3.ItemBorderColor = System.Drawing.Color.White;
-            this.bunifuDropdown3.ItemForeColor = System.Drawing.Color.Purple;
-            this.bunifuDropdown3.ItemHeight = 26;
-            this.bunifuDropdown3.ItemHighLightColor = System.Drawing.Color.Thistle;
-            this.bunifuDropdown3.Location = new System.Drawing.Point(64, 226);
-            this.bunifuDropdown3.Name = "bunifuDropdown3";
-            this.bunifuDropdown3.Size = new System.Drawing.Size(217, 32);
-            this.bunifuDropdown3.TabIndex = 18;
-            this.bunifuDropdown3.Text = "Room";
+            this.start_time_dropdown.BackColor = System.Drawing.Color.White;
+            this.start_time_dropdown.BorderRadius = 1;
+            this.start_time_dropdown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.start_time_dropdown.DisabledColor = System.Drawing.Color.Gray;
+            this.start_time_dropdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.start_time_dropdown.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
+            this.start_time_dropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.start_time_dropdown.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.start_time_dropdown.FillDropDown = false;
+            this.start_time_dropdown.FillIndicator = false;
+            this.start_time_dropdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.start_time_dropdown.ForeColor = System.Drawing.Color.Purple;
+            this.start_time_dropdown.FormattingEnabled = true;
+            this.start_time_dropdown.Icon = null;
+            this.start_time_dropdown.IndicatorColor = System.Drawing.Color.Purple;
+            this.start_time_dropdown.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.start_time_dropdown.ItemBackColor = System.Drawing.Color.White;
+            this.start_time_dropdown.ItemBorderColor = System.Drawing.Color.White;
+            this.start_time_dropdown.ItemForeColor = System.Drawing.Color.Purple;
+            this.start_time_dropdown.ItemHeight = 26;
+            this.start_time_dropdown.ItemHighLightColor = System.Drawing.Color.Thistle;
+            this.start_time_dropdown.Location = new System.Drawing.Point(64, 179);
+            this.start_time_dropdown.Name = "start_time_dropdown";
+            this.start_time_dropdown.Size = new System.Drawing.Size(100, 32);
+            this.start_time_dropdown.TabIndex = 19;
+            this.start_time_dropdown.Text = "Starting time";
             // 
-            // bunifuDropdown2
+            // room_dropdown
             // 
-            this.bunifuDropdown2.BackColor = System.Drawing.Color.White;
-            this.bunifuDropdown2.BorderRadius = 1;
-            this.bunifuDropdown2.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.bunifuDropdown2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.bunifuDropdown2.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
-            this.bunifuDropdown2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.bunifuDropdown2.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.bunifuDropdown2.FillDropDown = false;
-            this.bunifuDropdown2.FillIndicator = false;
-            this.bunifuDropdown2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bunifuDropdown2.ForeColor = System.Drawing.Color.Purple;
-            this.bunifuDropdown2.FormattingEnabled = true;
-            this.bunifuDropdown2.Icon = null;
-            this.bunifuDropdown2.IndicatorColor = System.Drawing.Color.Purple;
-            this.bunifuDropdown2.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.bunifuDropdown2.ItemBackColor = System.Drawing.Color.White;
-            this.bunifuDropdown2.ItemBorderColor = System.Drawing.Color.White;
-            this.bunifuDropdown2.ItemForeColor = System.Drawing.Color.Purple;
-            this.bunifuDropdown2.ItemHeight = 26;
-            this.bunifuDropdown2.ItemHighLightColor = System.Drawing.Color.Thistle;
-            this.bunifuDropdown2.Location = new System.Drawing.Point(181, 179);
-            this.bunifuDropdown2.Name = "bunifuDropdown2";
-            this.bunifuDropdown2.Size = new System.Drawing.Size(100, 32);
-            this.bunifuDropdown2.TabIndex = 17;
-            this.bunifuDropdown2.Text = "Ending Time";
+            this.room_dropdown.BackColor = System.Drawing.Color.White;
+            this.room_dropdown.BorderRadius = 1;
+            this.room_dropdown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.room_dropdown.DisabledColor = System.Drawing.Color.Gray;
+            this.room_dropdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.room_dropdown.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
+            this.room_dropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.room_dropdown.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.room_dropdown.FillDropDown = false;
+            this.room_dropdown.FillIndicator = false;
+            this.room_dropdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.room_dropdown.ForeColor = System.Drawing.Color.Purple;
+            this.room_dropdown.FormattingEnabled = true;
+            this.room_dropdown.Icon = null;
+            this.room_dropdown.IndicatorColor = System.Drawing.Color.Purple;
+            this.room_dropdown.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.room_dropdown.ItemBackColor = System.Drawing.Color.White;
+            this.room_dropdown.ItemBorderColor = System.Drawing.Color.White;
+            this.room_dropdown.ItemForeColor = System.Drawing.Color.Purple;
+            this.room_dropdown.ItemHeight = 26;
+            this.room_dropdown.ItemHighLightColor = System.Drawing.Color.Thistle;
+            this.room_dropdown.Location = new System.Drawing.Point(64, 226);
+            this.room_dropdown.Name = "room_dropdown";
+            this.room_dropdown.Size = new System.Drawing.Size(217, 32);
+            this.room_dropdown.TabIndex = 18;
+            this.room_dropdown.Text = "Room";
             // 
-            // bunifuDropdown1
+            // end_time_dropdown
             // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.BorderRadius = 1;
-            this.bunifuDropdown1.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.bunifuDropdown1.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
-            this.bunifuDropdown1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.bunifuDropdown1.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.bunifuDropdown1.FillDropDown = false;
-            this.bunifuDropdown1.FillIndicator = false;
-            this.bunifuDropdown1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.Purple;
-            this.bunifuDropdown1.FormattingEnabled = true;
-            this.bunifuDropdown1.Icon = null;
-            this.bunifuDropdown1.IndicatorColor = System.Drawing.Color.Purple;
-            this.bunifuDropdown1.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.bunifuDropdown1.ItemBackColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.ItemBorderColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.ItemForeColor = System.Drawing.Color.Purple;
-            this.bunifuDropdown1.ItemHeight = 26;
-            this.bunifuDropdown1.ItemHighLightColor = System.Drawing.Color.Thistle;
-            this.bunifuDropdown1.Location = new System.Drawing.Point(64, 132);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.Size = new System.Drawing.Size(217, 32);
-            this.bunifuDropdown1.TabIndex = 16;
-            this.bunifuDropdown1.Text = "Instructor";
+            this.end_time_dropdown.BackColor = System.Drawing.Color.White;
+            this.end_time_dropdown.BorderRadius = 1;
+            this.end_time_dropdown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.end_time_dropdown.DisabledColor = System.Drawing.Color.Gray;
+            this.end_time_dropdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.end_time_dropdown.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
+            this.end_time_dropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.end_time_dropdown.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.end_time_dropdown.FillDropDown = false;
+            this.end_time_dropdown.FillIndicator = false;
+            this.end_time_dropdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.end_time_dropdown.ForeColor = System.Drawing.Color.Purple;
+            this.end_time_dropdown.FormattingEnabled = true;
+            this.end_time_dropdown.Icon = null;
+            this.end_time_dropdown.IndicatorColor = System.Drawing.Color.Purple;
+            this.end_time_dropdown.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.end_time_dropdown.ItemBackColor = System.Drawing.Color.White;
+            this.end_time_dropdown.ItemBorderColor = System.Drawing.Color.White;
+            this.end_time_dropdown.ItemForeColor = System.Drawing.Color.Purple;
+            this.end_time_dropdown.ItemHeight = 26;
+            this.end_time_dropdown.ItemHighLightColor = System.Drawing.Color.Thistle;
+            this.end_time_dropdown.Location = new System.Drawing.Point(181, 179);
+            this.end_time_dropdown.Name = "end_time_dropdown";
+            this.end_time_dropdown.Size = new System.Drawing.Size(100, 32);
+            this.end_time_dropdown.TabIndex = 17;
+            this.end_time_dropdown.Text = "Ending Time";
+            // 
+            // instructor_dropdown
+            // 
+            this.instructor_dropdown.BackColor = System.Drawing.Color.White;
+            this.instructor_dropdown.BorderRadius = 1;
+            this.instructor_dropdown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.instructor_dropdown.DisabledColor = System.Drawing.Color.Gray;
+            this.instructor_dropdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.instructor_dropdown.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
+            this.instructor_dropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.instructor_dropdown.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.instructor_dropdown.FillDropDown = false;
+            this.instructor_dropdown.FillIndicator = false;
+            this.instructor_dropdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.instructor_dropdown.ForeColor = System.Drawing.Color.Purple;
+            this.instructor_dropdown.FormattingEnabled = true;
+            this.instructor_dropdown.Icon = null;
+            this.instructor_dropdown.IndicatorColor = System.Drawing.Color.Purple;
+            this.instructor_dropdown.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.instructor_dropdown.ItemBackColor = System.Drawing.Color.White;
+            this.instructor_dropdown.ItemBorderColor = System.Drawing.Color.White;
+            this.instructor_dropdown.ItemForeColor = System.Drawing.Color.Purple;
+            this.instructor_dropdown.ItemHeight = 26;
+            this.instructor_dropdown.ItemHighLightColor = System.Drawing.Color.Thistle;
+            this.instructor_dropdown.Location = new System.Drawing.Point(64, 132);
+            this.instructor_dropdown.Name = "instructor_dropdown";
+            this.instructor_dropdown.Size = new System.Drawing.Size(217, 32);
+            this.instructor_dropdown.TabIndex = 16;
+            this.instructor_dropdown.Text = "Instructor";
             // 
             // subject_code_display
             // 
@@ -210,27 +219,6 @@
             this.subject_code_display.TabIndex = 15;
             this.subject_code_display.Text = "gunaLineTextBox1";
             this.subject_code_display.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // subject_code_textbox
-            // 
-            this.subject_code_textbox.BorderColorFocused = System.Drawing.Color.Blue;
-            this.subject_code_textbox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.subject_code_textbox.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.subject_code_textbox.BorderThickness = 3;
-            this.subject_code_textbox.characterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.subject_code_textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.subject_code_textbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subject_code_textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.subject_code_textbox.isPassword = false;
-            this.subject_code_textbox.Location = new System.Drawing.Point(122, 13);
-            this.subject_code_textbox.Margin = new System.Windows.Forms.Padding(4);
-            this.subject_code_textbox.MaxLength = 32767;
-            this.subject_code_textbox.Name = "subject_code_textbox";
-            this.subject_code_textbox.Size = new System.Drawing.Size(100, 37);
-            this.subject_code_textbox.TabIndex = 6;
-            this.subject_code_textbox.Text = "SUBJECT CODE";
-            this.subject_code_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.subject_code_textbox.OnValueChanged += new System.EventHandler(this.subject_code_textbox_OnValueChanged);
             // 
             // button_discard
             // 
@@ -294,6 +282,7 @@
             this.button_discard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.button_discard.TextMarginLeft = 0;
             this.button_discard.UseDefaultRadiusAndThickness = true;
+            this.button_discard.Click += new System.EventHandler(this.button_discard_Click);
             // 
             // button_save
             // 
@@ -358,6 +347,29 @@
             this.button_save.TextMarginLeft = 0;
             this.button_save.UseDefaultRadiusAndThickness = true;
             // 
+            // subject_code_textbox
+            // 
+            this.subject_code_textbox.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.subject_code_textbox.BorderColorFocused = System.Drawing.Color.Blue;
+            this.subject_code_textbox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.subject_code_textbox.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.subject_code_textbox.BorderThickness = 3;
+            this.subject_code_textbox.characterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.subject_code_textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.subject_code_textbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subject_code_textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.subject_code_textbox.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.subject_code_textbox.isPassword = false;
+            this.subject_code_textbox.Location = new System.Drawing.Point(122, 13);
+            this.subject_code_textbox.Margin = new System.Windows.Forms.Padding(4);
+            this.subject_code_textbox.MaxLength = 32767;
+            this.subject_code_textbox.Name = "subject_code_textbox";
+            this.subject_code_textbox.Size = new System.Drawing.Size(100, 37);
+            this.subject_code_textbox.TabIndex = 6;
+            this.subject_code_textbox.Text = "SUBJECT CODE";
+            this.subject_code_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.subject_code_textbox.OnValueChanged += new System.EventHandler(this.subject_code_textbox_OnValueChanged);
+            // 
             // Edit_box
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -368,9 +380,11 @@
             this.Controls.Add(this.gunaShadowPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Edit_box";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Edit_box";
             this.gunaShadowPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -379,13 +393,14 @@
 
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel1;
         private System.Windows.Forms.Panel panel1;
-        private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown4;
-        private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown3;
-        private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown2;
-        private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown1;
+        private Bunifu.UI.WinForms.BunifuDropdown start_time_dropdown;
+        private Bunifu.UI.WinForms.BunifuDropdown room_dropdown;
+        private Bunifu.UI.WinForms.BunifuDropdown end_time_dropdown;
+        private Bunifu.UI.WinForms.BunifuDropdown instructor_dropdown;
         private Guna.UI.WinForms.GunaLineTextBox subject_code_display;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton button_discard;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton button_save;
+        private System.Windows.Forms.TextBox textBox1;
         private Bunifu.Framework.UI.BunifuMetroTextbox subject_code_textbox;
     }
 }
