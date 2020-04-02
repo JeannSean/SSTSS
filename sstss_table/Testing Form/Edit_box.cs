@@ -14,11 +14,11 @@ namespace Testing_Form
     public partial class Edit_box : Form
     {
         /// <attribute>
-        private static string v_subcode;
-        private static string v_instrctr;
-        private static string v_stime;
-        private static string v_etime;
-        private static string v_room;
+        private string v_subcode;
+        private string v_instrctr;
+        private string v_stime;
+        private string v_etime;
+        private string v_room;
 
         internal string subcode{ get { return v_subcode; } set { v_subcode = value;  } }
         internal string instructor { get { return v_instrctr; } set { v_instrctr = value; } }
@@ -35,7 +35,9 @@ namespace Testing_Form
             //  3 - end time
             //  4 - room
             //  5 - section(hidden)
+            //  6 - panel
             InitializeComponent();
+            label1.Text = data[6];
             if (data[0] != null)
             {
                 subject_code_textbox.Text = data[0];
@@ -57,7 +59,7 @@ namespace Testing_Form
             {
                 room_dropdown.Text = data[4];
             }
-
+            
 
         }
 
@@ -71,6 +73,31 @@ namespace Testing_Form
         private void button_discard_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void button_save_Click(object sender, EventArgs e)
+        {
+            DBCmmnds dbcmmnd = new DBCmmnds();
+        }
+
+        private void instructor_dropdown_DropDown(object sender, EventArgs e)
+        {
+            DBCmmnds dbcmd = new DBCmmnds();
+            foreach (string strdata in dbcmd.getInsDD())
+            {
+                //Console.WriteLine(strdata);
+                instructor_dropdown.Items.Add(strdata);
+            }
+        }
+
+        private void room_dropdown_DropDown(object sender, EventArgs e)
+        {
+            DBCmmnds dbcmd = new DBCmmnds();
+            foreach (string strdata in dbcmd.getRoomDD())
+            {
+                //Console.WriteLine(strdata);
+                room_dropdown.Items.Add(strdata);
+            }
         }
     }
 }

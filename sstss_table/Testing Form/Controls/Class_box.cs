@@ -54,7 +54,8 @@ namespace Testing_Form.Controls
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
-            string[] data = {subcode, instructor, start_time, end_time, room, section };
+            //string[] data = {subcode, instructor, start_time, end_time, room, section,this.Name };
+            string[] data = { "CC101", instructor, start_time, end_time, room, section, this.Name };
             Edit_box calledbox = new Edit_box(data);
             calledbox.ShowDialog();
 

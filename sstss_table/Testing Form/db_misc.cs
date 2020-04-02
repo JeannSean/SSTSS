@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections;
 using MySql.Data.MySqlClient;
+
+
 namespace db_misc
 {
     public class DBCmmnds
     {
-
+        /// <universal>
         public void addData(String query)
         {
             MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=sstss_data;password=sstssthor");
@@ -41,6 +44,59 @@ namespace db_misc
             conn.Close();
             return data;
         }
+
+        /// </universal>
+        public ArrayList getInsDD()
+        {
+            ArrayList list = new ArrayList();
+            MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=sstss_data;password=sstssthor");
+            try
+            {
+                string stm = "SELECT * FROM `tbl_instrctr`";
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(stm, conn);
+                MySqlDataReader dr = cmd.ExecuteReader(); ;
+                list.Clear();
+                while (dr.Read())
+                {
+                    list.Add(dr["first_name"] + " " + dr["middle_name"] + " " + dr["last_name"]);
+                    
+                }
+                conn.Close();
+            }
+            catch(MySqlException ex)
+            {
+                Console.WriteLine("Error: {0}", ex.ToString());
+            }
+
+            return list;
+        }
+
+        public ArrayList getRoomDD()
+        {
+            ArrayList list = new ArrayList();
+            MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=sstss_data;password=sstssthor");
+            try
+            {
+                string stm = "SELECT * FROM `tbl_room`";
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(stm, conn);
+                MySqlDataReader dr = cmd.ExecuteReader(); ;
+                list.Clear();
+                while (dr.Read())
+                {
+                    list.Add(dr["description"]);
+
+                }
+                conn.Close();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error: {0}", ex.ToString());
+            }
+
+            return list;
+        }
         /*       
         try 
         {
@@ -75,7 +131,7 @@ namespace db_misc
             }
         */
 
-        
+
 
     }
 }
