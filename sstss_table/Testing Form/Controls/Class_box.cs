@@ -20,42 +20,88 @@ namespace Testing_Form.Controls
         private string v_etime;
         private string v_room;
         private string v_class;
-        public string subcode { get { return v_subcode; } set { v_subcode = value; } }
-        public string instructor { get { return v_instrctr; } set { v_instrctr = value; } }
-        public string start_time { get { return v_stime; } set { v_stime = value; } }
-        public string end_time { get { return v_etime; } set { v_etime = value; } }
-        public string room { get { return v_room; } set { v_room = value; } }
-        public string section { get { return v_class; } set { v_class = value; } }
-
+        private string subcode { get { return v_subcode; } 
+            set 
+            { 
+                v_subcode = value;
+                subject_box.Text = value;
+            } 
+        }
+        private string instructor { get { return v_instrctr; } 
+            set 
+            { 
+                v_instrctr = value;
+                instructor_box.Text = value;
+            } 
+        }
+        private string start_time { get { return v_stime; } 
+            set 
+            {
+                v_stime = value;
+                time_box.Text = value;
+            } 
+        }
+        private string end_time { get { return v_etime; } 
+            set 
+            { 
+                v_etime = value;
+                time_box.Text += "-"+value;
+            } 
+        }
+        private string room { get { return v_room; } 
+            set 
+            { 
+                v_room = value;
+                room_box.Text = value;
+            } 
+        }
+        private string section { get { return v_class; } 
+            set 
+            { 
+                v_class = value;
+                this.Name = value;
+                label1.Text = this.Name;
+            } 
+        }
         /// </summary>
+
+        /// <setValue>
+        public void setSubjecode(string value)
+        {
+            subcode = value;
+        }
+        public void setInstructor(string value)
+        {
+            instructor = value;
+        }
+        public void setStartingTime(string value)
+        {
+            start_time = value;
+        }
+        public void setEndingTime(string value)
+        {
+            end_time = value;
+        }
+        public void setRoom(string value)
+        {
+            room = value;
+        }
+        public void setSection(string value)
+        {
+            section = value;
+        }
+        /// </setValue>
 
         public Class_box()
         {
-
             InitializeComponent();
-            if (subcode != null)
-            {
-                subject_box.Text = subcode;
-            }
-            if (instructor != null)
-            {
-                instructor_box.Text = instructor;
-            }
-            if (start_time != null && end_time !=null)
-            {
-                time_box.Text = start_time+"-"+end_time;
-            }
-            if (room != null)
-            {
-                room_box.Text = room;
-            }
             
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
-            //string[] data = {subcode, instructor, start_time, end_time, room, section,this.Name };
-            string[] data = { "CC101", instructor, start_time, end_time, room, section, this.Name };
+            
+            string[] data = { "CC101", instructor, start_time, end_time, room, section };
             Edit_box calledbox = new Edit_box(data);
             calledbox.ShowDialog();
 

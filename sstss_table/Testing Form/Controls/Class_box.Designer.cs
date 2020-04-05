@@ -38,6 +38,7 @@
             this.instructor_box = new Guna.UI.WinForms.GunaLineTextBox();
             this.time_box = new Guna.UI.WinForms.GunaLineTextBox();
             this.room_box = new Guna.UI.WinForms.GunaLineTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.class_panel.SuspendLayout();
             this.class_panel_cntnr.SuspendLayout();
             this.button_cntnr.SuspendLayout();
@@ -76,6 +77,7 @@
             // button_cntnr
             // 
             this.button_cntnr.BackColor = System.Drawing.Color.Gold;
+            this.button_cntnr.Controls.Add(this.label1);
             this.button_cntnr.Controls.Add(this.bunifuImageButton2);
             this.button_cntnr.Controls.Add(this.bunifuImageButton1);
             this.button_cntnr.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -222,6 +224,15 @@
             this.room_box.Text = "Room101";
             this.room_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "label1";
+            // 
             // Class_box
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,6 +244,7 @@
             this.class_panel.ResumeLayout(false);
             this.class_panel_cntnr.ResumeLayout(false);
             this.button_cntnr.ResumeLayout(false);
+            this.button_cntnr.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -248,5 +260,6 @@
         private Guna.UI.WinForms.GunaLineTextBox instructor_box;
         private Guna.UI.WinForms.GunaLineTextBox time_box;
         private Guna.UI.WinForms.GunaLineTextBox room_box;
+        private System.Windows.Forms.Label label1;
     }
 }

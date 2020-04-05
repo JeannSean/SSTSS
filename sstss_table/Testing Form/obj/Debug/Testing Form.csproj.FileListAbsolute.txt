@@ -1,7 +1,6 @@
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Testing Form.exe.config
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Testing Form.exe
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Testing Form.pdb
-C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testing Form.csprojAssemblyReference.cache
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testing_Form.Properties.Resources.resources
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testing Form.csproj.GenerateResource.cache
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testing Form.csproj.CoreCompileInputs.cache
@@ -24,7 +23,6 @@ C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Bunif
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Bunifu_UI_v1.5.3.xml
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.xml
-C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Bunifu.UI.WinForms.BunifuFormDock.dll
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Bunifu.UI.WinForms.BunifuFormDock.xml
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\System.Security.AccessControl.dll
@@ -40,3 +38,5 @@ C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Bunif
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testing_Form.Edit_box.resources
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.dll
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.xml
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testing_Form.Controls.table_module_day.resources
+C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testing Form.csprojAssemblyReference.cache

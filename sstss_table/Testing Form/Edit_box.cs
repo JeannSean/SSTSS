@@ -35,9 +35,8 @@ namespace Testing_Form
             //  3 - end time
             //  4 - room
             //  5 - section(hidden)
-            //  6 - panel
             InitializeComponent();
-            label1.Text = data[6];
+            label1.Text = data[5];
             if (data[0] != null)
             {
                 subject_code_textbox.Text = data[0];

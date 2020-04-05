@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.bunifuVScrollBar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.table_module1 = new Testing_Form.Controls.table_module();
+            this.bunifuVScrollBar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,6 +43,16 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(995, 565);
             this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // table_module1
+            // 
+            this.table_module1.AutoSize = true;
+            this.table_module1.Location = new System.Drawing.Point(3, 3);
+            this.table_module1.MaximumSize = new System.Drawing.Size(973, 863);
+            this.table_module1.MinimumSize = new System.Drawing.Size(973, 539);
+            this.table_module1.Name = "table_module1";
+            this.table_module1.Size = new System.Drawing.Size(973, 539);
+            this.table_module1.TabIndex = 0;
             // 
             // bunifuVScrollBar1
             // 
@@ -83,15 +93,6 @@
             this.bunifuVScrollBar1.ThumbMargin = 1;
             this.bunifuVScrollBar1.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
             this.bunifuVScrollBar1.Value = 0;
-            // 
-            // table_module1
-            // 
-            this.table_module1.AutoSize = true;
-            this.table_module1.Location = new System.Drawing.Point(3, 3);
-            this.table_module1.MaximumSize = new System.Drawing.Size(973, 863);
-            this.table_module1.Name = "table_module1";
-            this.table_module1.Size = new System.Drawing.Size(0, 0);
-            this.table_module1.TabIndex = 0;
             // 
             // Form1
             // 

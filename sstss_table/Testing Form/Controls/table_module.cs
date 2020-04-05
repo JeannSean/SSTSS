@@ -11,22 +11,53 @@ using System.Windows.Forms;
 namespace Testing_Form.Controls
 {
     public partial class table_module : UserControl
-    {   private string v_section;
-        public string section { get { return v_section; } set { v_section = value; } }
+    {   
+        
+        private static string section { get; set;  }
+
+        public static void setSection(String value)
+        {
+            section = value;
+        }
         public table_module()
         {
+            setSection("BSCS 2");
+
             InitializeComponent();
-        }
-
-        private void bunifuButton1_Click(object sender, EventArgs e)
-        {
-            Class_box cbc = new Class_box();
-            monday_cntnr.Controls.Add(cbc);
-            cbc.Dock = DockStyle.Top;
-            monday_cntnr.Controls.SetChildIndex(cbc, 1);
+            table_module_day[] tbl_day = new table_module_day[6];
+            for (int i=0;i<6;i++)
+            {
+                tbl_day[i] = new table_module_day();
+                string day="";
+                switch (i)
+                {
+                    case 0:
+                        day = "Saturday";
+                        break;
+                    case 1:
+                        day = "Friday";
+                        break;
+                    case 2:
+                        day = "Thursday";
+                        break;
+                    case 3:
+                        day = "Wednesday";
+                        break;
+                    case 4:
+                        day = "Tuesday";
+                        break;
+                    case 5:
+                        day = "Monday";
+                        break;
+                }                
+                tbl_day[i].setDay(day);
+                tbl_day[i].setSection(section);
+                tbl_day[i].Dock = DockStyle.Left;
+                this.Controls.Add(tbl_day[i]);
+            }
             
-
-
         }
+
+
     }
 }

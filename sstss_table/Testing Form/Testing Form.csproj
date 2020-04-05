@@ -122,6 +122,12 @@
     <Compile Include="Controls\table_module.Designer.cs">
       <DependentUpon>table_module.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\table_module_day.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\table_module_day.Designer.cs">
+      <DependentUpon>table_module_day.cs</DependentUpon>
+    </Compile>
     <Compile Include="db_misc.cs" />
     <Compile Include="Edit_box.cs">
       <SubType>Form</SubType>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\table_module.resx">
       <DependentUpon>table_module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\table_module_day.resx">
+      <DependentUpon>table_module_day.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edit_box.resx">
       <DependentUpon>Edit_box.cs</DependentUpon>
