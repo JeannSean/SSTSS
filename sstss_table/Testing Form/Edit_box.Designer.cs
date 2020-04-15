@@ -127,6 +127,7 @@
             this.start_time_dropdown.TabIndex = 19;
             this.start_time_dropdown.Text = "Starting time";
             this.start_time_dropdown.DropDown += new System.EventHandler(this.start_time_dropdown_DropDown);
+            this.start_time_dropdown.SelectedValueChanged += new System.EventHandler(this.start_time_dropdown_TextChanged);
             // 
             // room_dropdown
             // 
@@ -168,6 +169,7 @@
             this.end_time_dropdown.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
             this.end_time_dropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.end_time_dropdown.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.end_time_dropdown.Enabled = false;
             this.end_time_dropdown.FillDropDown = false;
             this.end_time_dropdown.FillIndicator = false;
             this.end_time_dropdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -231,7 +233,6 @@
             this.subject_code_display.SelectedText = "";
             this.subject_code_display.Size = new System.Drawing.Size(247, 52);
             this.subject_code_display.TabIndex = 15;
-            this.subject_code_display.Text = "gunaLineTextBox1";
             this.subject_code_display.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button_discard

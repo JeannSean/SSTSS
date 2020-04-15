@@ -52,15 +52,15 @@ namespace db_misc
             MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=sstss_data;password=sstssthor");
             try
             {
-                string stm = "SELECT * FROM `tbl_instrctr`";
+                string stm = "SELECT CONCAT(`last_name`,\", \",`first_name`,\" \",`middle_name`) FROM `tbl_instrctr`";
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(stm, conn);
                 MySqlDataReader dr = cmd.ExecuteReader(); ;
                 list.Clear();
                 while (dr.Read())
                 {
-                    list.Add(dr["first_name"] + " " + dr["middle_name"] + " " + dr["last_name"]);
-                    
+                    list.Add(Convert.ToString(dr[0]));
+
                 }
                 conn.Close();
             }
@@ -103,14 +103,13 @@ namespace db_misc
             MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=sstss_data;password=sstssthor");
             try
             {
-                string stm = "SELECT * FROM `tbl_time`";
+                string stm = "SELECT TIME_FORMAT(`time`, '%h:%i') FROM `tbl_time`";
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(stm, conn);
-                MySqlDataReader dr = cmd.ExecuteReader(); ;
-                list.Clear();
+                MySqlDataReader dr = cmd.ExecuteReader(); ;                
                 while (dr.Read())
                 {
-                    list.Add(dr["time"].ToString());
+                    list.Add(Convert.ToString(dr[0]));
 
                 }
                 conn.Close();
@@ -139,7 +138,7 @@ namespace db_misc
                     for (int i=0;i< dataReader.VisibleFieldCount; i++)
                     {
                         temp[i] = Convert.ToString(dataReader[i]);
-                        //Console.WriteLine(temp[i]);
+                        Console.WriteLine(temp[i]);
                     }
                     list.Add(temp);
                 }

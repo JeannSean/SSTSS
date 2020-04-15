@@ -23,12 +23,12 @@ namespace Testing_Form.Controls
             } 
         }
 
+        private string panelname { get; set; }
+
         private string section { get; set; }
-
-
         private string ctrlname() {            
             for (int i=0;i<6;i++) {
-                if (!day_cntnr.Controls.ContainsKey(section + "_" + day + "_" + i))
+                if (!day_cntnr.Controls.ContainsKey(panelname + "_" + day + "_" + i))
                 {
                     return ""+i;
                 }
@@ -43,6 +43,10 @@ namespace Testing_Form.Controls
             day = value;
         }
 
+        public void setPanelname(string value)
+        {
+            panelname = value;
+        }
         public void setSection(string value)
         {
             section = value;
@@ -50,15 +54,9 @@ namespace Testing_Form.Controls
         /// </setValues>
         public table_module_day()
         {
-            DBCmmnds dbcmd = new DBCmmnds();
             InitializeComponent();
             //0 - section
-            //1 - day
-            string[] attrb = 
-            {
-                dbcmd.getData("SELECT `section_id` FROM `tbl_section` WHERE `description` = '"+section+"'"), 
-                dbcmd.getData("SELECT `day_id` FROM `tbl_day` WHERE `description` = '" + day + "'") 
-            };                        
+            //1 - day               
 
         }
 
@@ -70,7 +68,8 @@ namespace Testing_Form.Controls
             day_cntnr.Controls.Add(cbc);
             cbc.Dock = DockStyle.Top;
             day_cntnr.Controls.SetChildIndex(cbc, 1);
-            cbc.setSection(section + "_" + day + "_" + ctrlname());
+            cbc.setPanelname(panelname + "_" + day + "_" + ctrlname());
+            cbc.setSection(section);
             cbc.setDay(day);
         }
         ////<update/add>
@@ -78,28 +77,24 @@ namespace Testing_Form.Controls
         public void addClass()
         {
             DBCmmnds dbcmd = new DBCmmnds();            
-            foreach (string[] s in dbcmd.getValues("SELECT `fk_day`,`panel_name`,`fk_subject`,`fk_instructor`,`fk_time`,`fk_etime`,`fk_room` FROM `tbl_class` WHERE `class_id` = '2' AND `fk_day` = '" + dbcmd.getData("SELECT `day_id` FROM `tbl_day` WHERE `description` = '" + day + "'") + "'") )
+            foreach (string[] s in dbcmd.getValues("SELECT `class_id`,`fk_day`,`panel_name`,`fk_subject`,`fk_instructor`,`fk_time`,`fk_etime`,`fk_room` FROM `tbl_class` WHERE `class_id` = '2' AND `fk_day` = '" + dbcmd.getData("SELECT `day_id` FROM `tbl_day` WHERE `description` = '" + day + "'") + "' ORDER BY `fk_time` ASC") )
             {
-                foreach(string ss in s)
-                {
-                    Console.WriteLine(ss);
-                }
-
                 if (!day_cntnr.Controls.ContainsKey(s[1]))
                 {
                     Class_box cbc = new Class_box();
-                    cbc.setDay(s[0]);
-                    cbc.setSection(s[1]);
-                    cbc.setSubjetcode(s[2]);
-                    cbc.setInstructor(s[3]);
-                    cbc.setStartingTime(s[4]);
-                    cbc.setEndingTime(s[5]);
-                    cbc.setRoom(s[6]);
                     cbc.onControlCountChanged += _onControlCountChanged;
                     onControlCountChanged();
                     cbc.Dock = DockStyle.Top;
                     day_cntnr.Controls.Add(cbc);
                     day_cntnr.Controls.SetChildIndex(cbc, 1);
+                    cbc.setSection(s[0]);
+                    cbc.setDay(s[1]);
+                    cbc.setPanelname(s[2]);
+                    cbc.setSubjetcode(s[3]);
+                    cbc.setInstructor(s[4]);
+                    cbc.setStartingTime(s[5]);
+                    cbc.setEndingTime(s[6]);
+                    cbc.setRoom(s[7]);
 
                 }
                 else

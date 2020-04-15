@@ -19,7 +19,8 @@ namespace Testing_Form.Controls
         private string v_stime;
         private string v_etime;
         private string v_room;
-        private string v_class;
+        private string v_panelname;
+        private string section { get; set; }
         private string day { get; set; }
         private string subcode { get { return v_subcode; } 
             set 
@@ -32,21 +33,21 @@ namespace Testing_Form.Controls
             set 
             { 
                 v_instrctr = value;
-                Instructor_Label.Text = dbcmd.getData("SELECT CONCAT(`last_name`,\" \",`first_name`,\", \",`middle_name`) AS `first_name` FROM `sstss_data`.`tbl_instrctr` WHERE `instructor_id` = '10'");
+                Instructor_Label.Text = dbcmd.getData("SELECT CONCAT(`last_name`,\", \",`first_name`,\" \",`middle_name`) AS `first_name` FROM `sstss_data`.`tbl_instrctr` WHERE `instructor_id` = '"+ value + "'");
             } 
         }
         private string start_time { get { return v_stime; } 
             set 
             {
                 v_stime = value;
-                class_time.Text = dbcmd.getData("SELECT TIME_FORMAT(`time`, '%i:%S') FROM `sstss_data`.`tbl_time` WHERE `time_id` = '" + value + "'");
+                class_time.Text = dbcmd.getData("SELECT TIME_FORMAT(`time`, '%h:%i') FROM `sstss_data`.`tbl_time` WHERE `time_id` = '" + value + "'");
             } 
         }
         private string end_time { get { return v_etime; } 
             set 
             { 
                 v_etime = value;
-                class_time.Text += " - "+ dbcmd.getData("SELECT TIME_FORMAT(`time`, '%i:%S') FROM `sstss_data`.`tbl_time` WHERE `time_id` = '" + value + "'");
+                class_time.Text += " - "+ dbcmd.getData("SELECT TIME_FORMAT(`time`, '%h:%i') FROM `sstss_data`.`tbl_time` WHERE `time_id` = '" + value + "'");
             } 
         }
         private string room { get { return v_room; } 
@@ -56,10 +57,11 @@ namespace Testing_Form.Controls
                 Room_label.Text = dbcmd.getData("SELECT `description` FROM `sstss_data`.`tbl_room` WHERE `room_id` = '" + value + "'");
             } 
         }
-        private string section { get { return v_class; } 
+        private string panelname
+        { get { return v_panelname; } 
             set 
-            { 
-                v_class = value;
+            {
+                v_panelname = value;
                 this.Name = value;
                 label1.Text = this.Name;
             } 
@@ -87,9 +89,15 @@ namespace Testing_Form.Controls
         {
             room = value;
         }
+
         public void setSection(string value)
         {
             section = value;
+        }
+
+        public void setPanelname(string value)
+        {
+            panelname = value;
         }
         public void setDay(string value)
         {
@@ -101,12 +109,13 @@ namespace Testing_Form.Controls
         {
             InitializeComponent();
             
+            
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {            
             Edit_box calledbox = new Edit_box();
-            calledbox.setSection(section);
+            calledbox.setPanelname(panelname);
             calledbox.setDay(day);
             if(subcode!=null)
                 calledbox.setSubjetcode(subcode);
@@ -118,12 +127,27 @@ namespace Testing_Form.Controls
                 calledbox.setEndingTime(end_time);
             if (room != null)
                 calledbox.setRoom(room);
+            if (section != null)
+                calledbox.setSection(section);
+            calledbox.onSave += updateClass;
             calledbox.ShowDialog();
+
+        }
+
+        private void updateClass(object sender, EventArgs e)
+        {
+            subcode = dbcmd.getData("SELECT `fk_subject` FROM `tbl_class` WHERE `panel_name` = '"+ panelname + "' ");
+            instructor = dbcmd.getData("SELECT `fk_instructor` FROM `tbl_class` WHERE `panel_name` = '" + panelname + "' ");
+            start_time = dbcmd.getData("SELECT `fk_time` FROM `tbl_class` WHERE `panel_name` = '" + panelname + "' ");
+            end_time = dbcmd.getData("SELECT `fk_etime` FROM `tbl_class` WHERE `panel_name` = '" + panelname + "' ");
+            room = dbcmd.getData("SELECT `fk_room` FROM `tbl_class` WHERE `panel_name` = '" + panelname + "' ");
+
 
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
+            dbcmd.addData("DELETE FROM `sstss_data`.`tbl_class` WHERE  `panel_name` = '" + panelname + "'");
             this.ParentForm.Controls.Remove(this);
             this.Dispose();
             onControlCountChanged?.Invoke(this, EventArgs.Empty);

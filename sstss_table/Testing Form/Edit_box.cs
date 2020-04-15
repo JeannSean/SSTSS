@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +21,7 @@ namespace Testing_Form
         private string v_stime;
         private string v_etime;
         private string v_room;
-        private string v_class;
+        private string v_panelname;
         private string day { get; set; }
         private string subcode
         {
@@ -37,7 +38,7 @@ namespace Testing_Form
             set
             {
                 v_instrctr = value;
-                instructor_dropdown.Text = value;
+                instructor_dropdown.Text = dbcmd.getData("SELECT CONCAT(`last_name`,\", \",`first_name`,\" \",`middle_name`) AS `first_name` FROM `sstss_data`.`tbl_instrctr` WHERE `instructor_id` = '10'");
             }
         }
         private string start_time
@@ -46,7 +47,7 @@ namespace Testing_Form
             set
             {
                 v_stime = value;
-                start_time_dropdown.Text = value;
+                start_time_dropdown.Text = dbcmd.getData("SELECT TIME_FORMAT(`time`, '%h:%i') FROM `sstss_data`.`tbl_time` WHERE `time_id` = '" + value + "'");
             }
         }
         private string end_time
@@ -55,7 +56,7 @@ namespace Testing_Form
             set
             {
                 v_etime = value;
-                end_time_dropdown.Text +=  value;
+                end_time_dropdown.Text = dbcmd.getData("SELECT TIME_FORMAT(`time`, '%h:%i') FROM `sstss_data`.`tbl_time` WHERE `time_id` = '" + value + "'");
             }
         }
         private string room
@@ -64,15 +65,18 @@ namespace Testing_Form
             set
             {
                 v_room = value;
-                room_dropdown.Text = value;
+                room_dropdown.Text = dbcmd.getData("SELECT `description` FROM `sstss_data`.`tbl_room` WHERE `room_id` = '" + value + "'");
             }
         }
-        private string section
+
+        private string section { get; set; }
+
+        private string panelname
         {
-            get { return v_class; }
+            get { return v_panelname; }
             set
             {
-                v_class = value;
+                v_panelname = value;
                 label1.Text = value;
             }
         }
@@ -94,10 +98,15 @@ namespace Testing_Form
         public void setEndingTime(string value)
         {
             end_time = value;
+            end_time_dropdown.Enabled = true;
         }
         public void setRoom(string value)
         {
             room = value;
+        }
+        public void setPanelname(string value)
+        {
+            panelname = value;
         }
         public void setSection(string value)
         {
@@ -126,8 +135,22 @@ namespace Testing_Form
             this.Dispose();
         }
 
+        public event EventHandler onSave;
         private void button_save_Click(object sender, EventArgs e)
         {
+            dbcmd.addData("INSERT INTO `sstss_data`.`tbl_class` (`class_id`, `fk_day`, `panel_name`, `fk_subject`, `fk_instructor`, `fk_time`, `fk_etime`, `fk_room`) VALUES ('" + section + "', '" + 
+                dbcmd.getData("SELECT `day_id` FROM `tbl_day` WHERE `description` = '" + day + "'")
+                + "', '" + panelname + "', '" + subject_code_textbox.Text + "', '" +
+                dbcmd.getData("SELECT `instructor_id` FROM `sstss_data`.`tbl_instrctr` WHERE CONCAT(`last_name`,\", \",`first_name`,\" \",`middle_name`) = '" + instructor_dropdown.Text+"'")
+                + "', '" +
+                dbcmd.getData("SELECT `time_id` FROM `sstss_data`.`tbl_time` WHERE TIME_FORMAT(`time`, '%h:%i') = '" + start_time_dropdown.Text + "'") 
+                + "', '" +
+                dbcmd.getData("SELECT `time_id` FROM `sstss_data`.`tbl_time` WHERE TIME_FORMAT(`time`, '%h:%i') = '" + end_time_dropdown.Text + "'")
+                + "', '" +
+                dbcmd.getData("SELECT `room_id` FROM `sstss_data`.`tbl_room` WHERE `description` = '" + room_dropdown.Text + "'")
+                + "')");
+            this.Dispose();
+            onSave?.Invoke(this, EventArgs.Empty);
             
         }
 
@@ -155,12 +178,35 @@ namespace Testing_Form
 
         private void start_time_dropdown_DropDown(object sender, EventArgs e)
         {
-            start_time_dropdown.Items.Clear();
-            DBCmmnds dbcmd = new DBCmmnds();
-            foreach (string strdata in dbcmd.getStimeDD())
+            start_time_dropdown.Items.Clear();            
+            ArrayList list =dbcmd.getStimeDD();
+            if (instructor_dropdown.Text != "Instructor") {
+                
+            }
+            foreach (string strdata in list)
             {
                 //Console.WriteLine(strdata);
-                start_time_dropdown.Items.Add(strdata);
+                if (list.IndexOf(strdata)%2==0)
+                    start_time_dropdown.Items.Add(strdata);
+                
+                
+            }
+            
+        }
+
+        private void start_time_dropdown_TextChanged(object sender, EventArgs e)
+        {
+            if (start_time_dropdown.Text != "Starting time")
+                end_time_dropdown.Enabled = true;
+            end_time_dropdown.Items.Clear();
+            ArrayList list = dbcmd.getStimeDD();
+            foreach (string strdata in list)
+            {
+                //Console.WriteLine(strdata);
+                if (list.IndexOf(strdata) % 2 != 0&& list.IndexOf(start_time_dropdown.Text)+1< list.IndexOf(strdata))
+                    end_time_dropdown.Items.Add(strdata);
+
+
             }
         }
     }
