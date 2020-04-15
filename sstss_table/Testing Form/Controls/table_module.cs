@@ -21,8 +21,9 @@ namespace Testing_Form.Controls
         }
         public table_module()
         {
+            //<temp>
             setSection("BSCS 2");
-
+            //</temp>
             InitializeComponent();
             table_module_day[] tbl_day = new table_module_day[6];
             for (int i=0;i<6;i++)
@@ -53,7 +54,7 @@ namespace Testing_Form.Controls
                 tbl_day[i].setDay(day);
                 tbl_day[i].setSection(section);
                 tbl_day[i].Dock = DockStyle.Left;
-                this.Controls.Add(tbl_day[i]);
+                this.table_container.Controls.Add(tbl_day[i]);
             }
             
         }

@@ -12,7 +12,7 @@ namespace Testing_Form.Controls
 {
     public partial class Class_box : UserControl
     {
-
+        
         /// <attribute>
         private string v_subcode;
         private string v_instrctr;
@@ -20,6 +20,7 @@ namespace Testing_Form.Controls
         private string v_etime;
         private string v_room;
         private string v_class;
+        private string day { get; set; }
         private string subcode { get { return v_subcode; } 
             set 
             { 
@@ -66,7 +67,7 @@ namespace Testing_Form.Controls
         /// </summary>
 
         /// <setValue>
-        public void setSubjecode(string value)
+        public void setSubjetcode(string value)
         {
             subcode = value;
         }
@@ -90,6 +91,10 @@ namespace Testing_Form.Controls
         {
             section = value;
         }
+        public void setDay(string value)
+        {
+            day = value;
+        }
         /// </setValue>
 
         public Class_box()
@@ -99,18 +104,32 @@ namespace Testing_Form.Controls
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
-        {
-            
-            string[] data = { "CC101", instructor, start_time, end_time, room, section };
-            Edit_box calledbox = new Edit_box(data);
+        {            
+            Edit_box calledbox = new Edit_box();
+            calledbox.setSection(section);
+            calledbox.setDay(day);
+            if(subcode!=null)
+                calledbox.setSubjetcode(subcode);
+            if (instructor != null)
+                calledbox.setInstructor(instructor);
+            if (start_time != null)
+                calledbox.setStartingTime(start_time);
+            if (end_time != null)
+                calledbox.setEndingTime(end_time);
+            if (room != null)
+                calledbox.setRoom(room);
             calledbox.ShowDialog();
 
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
-        {           
+        {
             this.ParentForm.Controls.Remove(this);
             this.Dispose();
+            onControlCountChanged?.Invoke(this, EventArgs.Empty);
         }
+
+        public event EventHandler onControlCountChanged;
+
     }
 }

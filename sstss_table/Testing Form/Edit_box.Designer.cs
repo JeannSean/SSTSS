@@ -126,6 +126,7 @@
             this.start_time_dropdown.Size = new System.Drawing.Size(100, 21);
             this.start_time_dropdown.TabIndex = 19;
             this.start_time_dropdown.Text = "Starting time";
+            this.start_time_dropdown.DropDown += new System.EventHandler(this.start_time_dropdown_DropDown);
             // 
             // room_dropdown
             // 

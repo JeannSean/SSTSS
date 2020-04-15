@@ -97,22 +97,37 @@ namespace db_misc
 
             return list;
         }
-        /*       
-        try 
+        public ArrayList getStimeDD()
         {
-          conn = new MySqlConnection(cs);
-          conn.Open();
+            ArrayList list = new ArrayList();
+            MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=sstss_data;password=sstssthor");
+            try
+            {
+                string stm = "SELECT * FROM `tbl_time`";
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(stm, conn);
+                MySqlDataReader dr = cmd.ExecuteReader(); ;
+                list.Clear();
+                while (dr.Read())
+                {
+                    list.Add(dr["time"].ToString());
 
-          string stm = "SELECT VERSION()";   
-          MySqlCommand cmd = new MySqlCommand(stm, conn);
-          string version = Convert.ToString(cmd.ExecuteScalar());
-          Console.WriteLine("MySQL version : {0}", version);
+                }
+                conn.Close();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error: {0}", ex.ToString());
+            }
 
-        } catch (MySqlException ex) 
-        {
-          Console.WriteLine("Error: {0}",  ex.ToString());
-
+            return list;
         }
+
+
+
+
+        /*       
+        
         _______________________________ 
         
             MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=sstss_data;password=sstssthor");

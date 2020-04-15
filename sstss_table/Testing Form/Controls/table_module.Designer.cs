@@ -33,7 +33,7 @@
             // 
             // table_container
             // 
-            this.table_container.AutoSize = true;
+            this.table_container.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.table_container.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.table_container.BaseColor = System.Drawing.SystemColors.ControlDarkDark;
             this.table_container.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -43,21 +43,20 @@
             this.table_container.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.table_container.ShadowColor = System.Drawing.Color.Black;
             this.table_container.ShadowDepth = 200;
-            this.table_container.Size = new System.Drawing.Size(973, 539);
+            this.table_container.Size = new System.Drawing.Size(973, 863);
             this.table_container.TabIndex = 4;
             // 
             // table_module
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.table_container);
             this.MaximumSize = new System.Drawing.Size(973, 863);
             this.MinimumSize = new System.Drawing.Size(973, 539);
             this.Name = "table_module";
-            this.Size = new System.Drawing.Size(973, 539);
+            this.Size = new System.Drawing.Size(973, 863);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
