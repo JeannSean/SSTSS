@@ -13,6 +13,7 @@ namespace Testing_Form
 {
     public partial class Edit_box : Form
     {
+        DBCmmnds dbcmd = new DBCmmnds();
         /// <attribute>
         private string v_subcode;
         private string v_instrctr;
@@ -115,10 +116,9 @@ namespace Testing_Form
 
         private void subject_code_textbox_OnValueChanged(object sender, EventArgs e)
         {
-            DBCmmnds dbcmmnd = new DBCmmnds(); 
             
             string subcode = subject_code_textbox.Text; 
-            subject_code_display.Text = dbcmmnd.getData("SELECT `description` FROM `sstss_data`.`tbl_subject` WHERE `subject_code` = '" + subcode + "';");
+            subject_code_display.Text = dbcmd.getData("SELECT `description` FROM `sstss_data`.`tbl_subject` WHERE `subject_code` = '" + subcode + "';");
         }
 
         private void button_discard_Click(object sender, EventArgs e)
@@ -128,12 +128,12 @@ namespace Testing_Form
 
         private void button_save_Click(object sender, EventArgs e)
         {
-            DBCmmnds dbcmmnd = new DBCmmnds();
+            
         }
 
         private void instructor_dropdown_DropDown(object sender, EventArgs e)
         {
-            DBCmmnds dbcmd = new DBCmmnds();
+            
             instructor_dropdown.Items.Clear();
             foreach (string strdata in dbcmd.getInsDD())
             {

@@ -55,6 +55,7 @@ namespace Testing_Form.Controls
                 tbl_day[i].setSection(section);
                 tbl_day[i].Dock = DockStyle.Left;
                 this.table_container.Controls.Add(tbl_day[i]);
+                tbl_day[i].addClass();
             }
             
         }

@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using db_misc;
 namespace Testing_Form.Controls
 {
     public partial class Class_box : UserControl
     {
-        
+        DBCmmnds dbcmd = new DBCmmnds();
         /// <attribute>
         private string v_subcode;
         private string v_instrctr;
@@ -25,35 +25,35 @@ namespace Testing_Form.Controls
             set 
             { 
                 v_subcode = value;
-                subject_box.Text = value;
+                subject_label.Text = dbcmd.getData("SELECT `description` FROM `sstss_data`.`tbl_subject` WHERE `subject_code` = '" + value + "'");
             } 
         }
         private string instructor { get { return v_instrctr; } 
             set 
             { 
                 v_instrctr = value;
-                instructor_box.Text = value;
+                Instructor_Label.Text = dbcmd.getData("SELECT CONCAT(`last_name`,\" \",`first_name`,\", \",`middle_name`) AS `first_name` FROM `sstss_data`.`tbl_instrctr` WHERE `instructor_id` = '10'");
             } 
         }
         private string start_time { get { return v_stime; } 
             set 
             {
                 v_stime = value;
-                time_box.Text = value;
+                class_time.Text = dbcmd.getData("SELECT TIME_FORMAT(`time`, '%i:%S') FROM `sstss_data`.`tbl_time` WHERE `time_id` = '" + value + "'");
             } 
         }
         private string end_time { get { return v_etime; } 
             set 
             { 
                 v_etime = value;
-                time_box.Text += "-"+value;
+                class_time.Text += " - "+ dbcmd.getData("SELECT TIME_FORMAT(`time`, '%i:%S') FROM `sstss_data`.`tbl_time` WHERE `time_id` = '" + value + "'");
             } 
         }
         private string room { get { return v_room; } 
             set 
             { 
                 v_room = value;
-                room_box.Text = value;
+                Room_label.Text = dbcmd.getData("SELECT `description` FROM `sstss_data`.`tbl_room` WHERE `room_id` = '" + value + "'");
             } 
         }
         private string section { get { return v_class; } 

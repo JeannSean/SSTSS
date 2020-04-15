@@ -123,20 +123,27 @@ namespace db_misc
             return list;
         }
 
-
-
-
-        /*       
-        
-        _______________________________ 
-        
-            MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=sstss_data;password=sstssthor");
+        public ArrayList getValues(String query)
+        {
+            ArrayList list = new ArrayList();
+            MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=sstss_data;password=sstssthor");            
             try
             {
-                Console.WriteLine("Connecting.........");
                 conn.Open();
-                Console.WriteLine("Connection Success!");
-                conn.Close();
+                string stm = query;
+                MySqlCommand cmd = new MySqlCommand(stm, conn);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    string[] temp = new string[dataReader.VisibleFieldCount];
+                    for (int i=0;i< dataReader.VisibleFieldCount; i++)
+                    {
+                        temp[i] = Convert.ToString(dataReader[i]);
+                        //Console.WriteLine(temp[i]);
+                    }
+                    list.Add(temp);
+                }
+
 
             }
             catch (Exception e)
@@ -144,9 +151,34 @@ namespace db_misc
                 Console.WriteLine("Connection Failed!");
                 Console.WriteLine(e.Message);
             }
-        */
+            conn.Close();            
+            return list;
+        }
+
 
 
 
     }
 }
+
+
+/*       
+
+_______________________________ 
+
+    MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=sstss_data;password=sstssthor");
+    try
+    {
+        Console.WriteLine("Connecting.........");
+        conn.Open();
+        Console.WriteLine("Connection Success!");
+        conn.Close();
+
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine("Connection Failed!");
+        Console.WriteLine(e.Message);
+    }
+*/
+

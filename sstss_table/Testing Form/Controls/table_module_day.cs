@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using db_misc;
+using System.Collections;
+
 namespace Testing_Form.Controls
 {
     public partial class table_module_day : UserControl
@@ -56,7 +58,7 @@ namespace Testing_Form.Controls
             {
                 dbcmd.getData("SELECT `section_id` FROM `tbl_section` WHERE `description` = '"+section+"'"), 
                 dbcmd.getData("SELECT `day_id` FROM `tbl_day` WHERE `description` = '" + day + "'") 
-            };
+            };                        
 
         }
 
@@ -73,9 +75,40 @@ namespace Testing_Form.Controls
         }
         ////<update/add>
 
-        private void addClass()
+        public void addClass()
         {
+            DBCmmnds dbcmd = new DBCmmnds();            
+            foreach (string[] s in dbcmd.getValues("SELECT `fk_day`,`panel_name`,`fk_subject`,`fk_instructor`,`fk_time`,`fk_etime`,`fk_room` FROM `tbl_class` WHERE `class_id` = '2' AND `fk_day` = '" + dbcmd.getData("SELECT `day_id` FROM `tbl_day` WHERE `description` = '" + day + "'") + "'") )
+            {
+                foreach(string ss in s)
+                {
+                    Console.WriteLine(ss);
+                }
 
+                if (!day_cntnr.Controls.ContainsKey(s[1]))
+                {
+                    Class_box cbc = new Class_box();
+                    cbc.setDay(s[0]);
+                    cbc.setSection(s[1]);
+                    cbc.setSubjetcode(s[2]);
+                    cbc.setInstructor(s[3]);
+                    cbc.setStartingTime(s[4]);
+                    cbc.setEndingTime(s[5]);
+                    cbc.setRoom(s[6]);
+                    cbc.onControlCountChanged += _onControlCountChanged;
+                    onControlCountChanged();
+                    cbc.Dock = DockStyle.Top;
+                    day_cntnr.Controls.Add(cbc);
+                    day_cntnr.Controls.SetChildIndex(cbc, 1);
+
+                }
+                else
+                    continue;
+
+            }
+            
+
+            
         }
 
 
@@ -87,7 +120,6 @@ namespace Testing_Form.Controls
         private void _onControlCountChanged(object sender, EventArgs e)
         {
             int ctrlcunt = day_cntnr.Controls.Count-2;
-            Console.WriteLine(ctrlcunt);
             if (ctrlcunt>4)           
                 button_add_day.Hide();            
             else
@@ -96,7 +128,6 @@ namespace Testing_Form.Controls
         private void onControlCountChanged()
         {
             int ctrlcunt = day_cntnr.Controls.Count - 1;
-            Console.WriteLine(ctrlcunt);
             if (ctrlcunt > 4)
                 button_add_day.Hide();
             else
