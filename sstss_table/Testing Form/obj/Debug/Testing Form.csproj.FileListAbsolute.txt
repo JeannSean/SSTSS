@@ -39,4 +39,3 @@ C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testi
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.dll
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.xml
 C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testing_Form.Controls.table_module_day.resources
-C:\Users\Firefly\Documents\GitHub\SSTSS\sstss_table\Testing Form\obj\Debug\Testing Form.csprojAssemblyReference.cache

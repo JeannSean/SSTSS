@@ -31,14 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Class_box));
             this.class_panel = new Guna.UI.WinForms.GunaShadowPanel();
             this.class_panel_cntnr = new System.Windows.Forms.Panel();
+            this.Room_label = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.class_time = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.Instructor_Label = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.subject_label = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.button_cntnr = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.bunifuImageButton2 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.subject_label = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.Instructor_Label = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.class_time = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.Room_label = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.class_panel.SuspendLayout();
             this.class_panel_cntnr.SuspendLayout();
             this.button_cntnr.SuspendLayout();
@@ -74,10 +73,53 @@
             this.class_panel_cntnr.Size = new System.Drawing.Size(157, 158);
             this.class_panel_cntnr.TabIndex = 0;
             // 
+            // Room_label
+            // 
+            this.Room_label.BackColor = System.Drawing.Color.White;
+            this.Room_label.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Room_label.Location = new System.Drawing.Point(0, 127);
+            this.Room_label.Name = "Room_label";
+            this.Room_label.Size = new System.Drawing.Size(157, 29);
+            this.Room_label.TabIndex = 18;
+            this.Room_label.Text = "Room101";
+            this.Room_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // class_time
+            // 
+            this.class_time.BackColor = System.Drawing.Color.White;
+            this.class_time.Dock = System.Windows.Forms.DockStyle.Top;
+            this.class_time.Location = new System.Drawing.Point(0, 98);
+            this.class_time.Name = "class_time";
+            this.class_time.Size = new System.Drawing.Size(157, 29);
+            this.class_time.TabIndex = 17;
+            this.class_time.Text = "00:00 - 00:00";
+            this.class_time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Instructor_Label
+            // 
+            this.Instructor_Label.BackColor = System.Drawing.Color.White;
+            this.Instructor_Label.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Instructor_Label.Location = new System.Drawing.Point(0, 66);
+            this.Instructor_Label.Name = "Instructor_Label";
+            this.Instructor_Label.Size = new System.Drawing.Size(157, 32);
+            this.Instructor_Label.TabIndex = 16;
+            this.Instructor_Label.Text = "Instructor";
+            this.Instructor_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // subject_label
+            // 
+            this.subject_label.BackColor = System.Drawing.Color.White;
+            this.subject_label.Dock = System.Windows.Forms.DockStyle.Top;
+            this.subject_label.Location = new System.Drawing.Point(0, 21);
+            this.subject_label.Name = "subject_label";
+            this.subject_label.Size = new System.Drawing.Size(157, 45);
+            this.subject_label.TabIndex = 15;
+            this.subject_label.Text = "Subject";
+            this.subject_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // button_cntnr
             // 
             this.button_cntnr.BackColor = System.Drawing.Color.Gold;
-            this.button_cntnr.Controls.Add(this.label1);
             this.button_cntnr.Controls.Add(this.bunifuImageButton2);
             this.button_cntnr.Controls.Add(this.bunifuImageButton1);
             this.button_cntnr.Dock = System.Windows.Forms.DockStyle.Top;
@@ -85,15 +127,6 @@
             this.button_cntnr.Name = "button_cntnr";
             this.button_cntnr.Size = new System.Drawing.Size(157, 21);
             this.button_cntnr.TabIndex = 13;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
             // 
             // bunifuImageButton2
             // 
@@ -161,50 +194,6 @@
             this.bunifuImageButton1.ZoomSpeed = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
-            // subject_label
-            // 
-            this.subject_label.BackColor = System.Drawing.Color.White;
-            this.subject_label.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subject_label.Location = new System.Drawing.Point(0, 21);
-            this.subject_label.Name = "subject_label";
-            this.subject_label.Size = new System.Drawing.Size(157, 45);
-            this.subject_label.TabIndex = 15;
-            this.subject_label.Text = "Subject";
-            this.subject_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Instructor_Label
-            // 
-            this.Instructor_Label.BackColor = System.Drawing.Color.White;
-            this.Instructor_Label.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Instructor_Label.Location = new System.Drawing.Point(0, 66);
-            this.Instructor_Label.Name = "Instructor_Label";
-            this.Instructor_Label.Size = new System.Drawing.Size(157, 32);
-            this.Instructor_Label.TabIndex = 16;
-            this.Instructor_Label.Text = "Instructor";
-            this.Instructor_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // class_time
-            // 
-            this.class_time.BackColor = System.Drawing.Color.White;
-            this.class_time.Dock = System.Windows.Forms.DockStyle.Top;
-            this.class_time.Location = new System.Drawing.Point(0, 98);
-            this.class_time.Name = "class_time";
-            this.class_time.Size = new System.Drawing.Size(157, 29);
-            this.class_time.TabIndex = 17;
-            this.class_time.Text = "00:00 - 00:00";
-            this.class_time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Room_label
-            // 
-            this.Room_label.BackColor = System.Drawing.Color.White;
-            this.Room_label.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Room_label.Location = new System.Drawing.Point(0, 127);
-            this.Room_label.Name = "Room_label";
-            this.Room_label.Size = new System.Drawing.Size(157, 29);
-            this.Room_label.TabIndex = 18;
-            this.Room_label.Text = "Room101";
-            this.Room_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Class_box
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,7 +205,6 @@
             this.class_panel.ResumeLayout(false);
             this.class_panel_cntnr.ResumeLayout(false);
             this.button_cntnr.ResumeLayout(false);
-            this.button_cntnr.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -228,7 +216,6 @@
         private System.Windows.Forms.Panel button_cntnr;
         private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton2;
         private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton1;
-        private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuCustomLabel subject_label;
         private Bunifu.Framework.UI.BunifuCustomLabel class_time;
         private Bunifu.Framework.UI.BunifuCustomLabel Instructor_Label;

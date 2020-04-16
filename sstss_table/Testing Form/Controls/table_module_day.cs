@@ -14,12 +14,12 @@ namespace Testing_Form.Controls
 {
     public partial class table_module_day : UserControl
     {
+        DBCmmnds dbcmd = new DBCmmnds();
         private string v_day;
         
         private string day { get { return v_day; } 
             set { 
                 v_day = value;
-                day_label.Text = value;
             } 
         }
 
@@ -41,6 +41,7 @@ namespace Testing_Form.Controls
         public void setDay(string value)
         {
             day = value;
+            day_label.Text = value;
         }
 
         public void setPanelname(string value)
@@ -55,6 +56,7 @@ namespace Testing_Form.Controls
         public table_module_day()
         {
             InitializeComponent();
+            
             //0 - section
             //1 - day               
 
@@ -63,6 +65,7 @@ namespace Testing_Form.Controls
         private void button_add_day_Click(object sender, EventArgs e)
         {
             Class_box cbc = new Class_box();
+            cbc.onClassUpdate += updateClass;
             cbc.onControlCountChanged += _onControlCountChanged;
             onControlCountChanged();
             day_cntnr.Controls.Add(cbc);
@@ -70,19 +73,21 @@ namespace Testing_Form.Controls
             day_cntnr.Controls.SetChildIndex(cbc, 1);
             cbc.setPanelname(panelname + "_" + day + "_" + ctrlname());
             cbc.setSection(section);
-            cbc.setDay(day);
+            cbc.setDay(dbcmd.getData("SELECT `day_id` FROM `sstss_data`.`tbl_day` WHERE `description` = '" + day + "'"));
+            
         }
         ////<update/add>
 
         public void addClass()
-        {
-            DBCmmnds dbcmd = new DBCmmnds();            
+        {          
             foreach (string[] s in dbcmd.getValues("SELECT `class_id`,`fk_day`,`panel_name`,`fk_subject`,`fk_instructor`,`fk_time`,`fk_etime`,`fk_room` FROM `tbl_class` WHERE `class_id` = '2' AND `fk_day` = '" + dbcmd.getData("SELECT `day_id` FROM `tbl_day` WHERE `description` = '" + day + "'") + "' ORDER BY `fk_time` ASC") )
             {
                 if (!day_cntnr.Controls.ContainsKey(s[1]))
                 {
                     Class_box cbc = new Class_box();
                     cbc.onControlCountChanged += _onControlCountChanged;
+                    cbc.onClassUpdate += updateClass;
+                    cbc.setParet(this);
                     onControlCountChanged();
                     cbc.Dock = DockStyle.Top;
                     day_cntnr.Controls.Add(cbc);
@@ -95,18 +100,21 @@ namespace Testing_Form.Controls
                     cbc.setStartingTime(s[5]);
                     cbc.setEndingTime(s[6]);
                     cbc.setRoom(s[7]);
+                    onControlCountChanged();
 
                 }
                 else
                     continue;
 
             }
-            
-
-            
         }
+        public event EventHandler triggerDispose;
 
-
+        private void updateClass(object sender, EventArgs e)
+        {
+            triggerDispose?.Invoke(this, EventArgs.Empty);
+            addClass();
+        }
 
 
 

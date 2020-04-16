@@ -20,6 +20,7 @@ namespace Testing_Form.Controls
         private string v_etime;
         private string v_room;
         private string v_panelname;
+        private table_module_day parent { get; set; }
         private string section { get; set; }
         private string day { get; set; }
         private string subcode { get { return v_subcode; } 
@@ -63,7 +64,7 @@ namespace Testing_Form.Controls
             {
                 v_panelname = value;
                 this.Name = value;
-                label1.Text = this.Name;
+                //label1.Text = this.Name;
             } 
         }
         /// </summary>
@@ -103,12 +104,16 @@ namespace Testing_Form.Controls
         {
             day = value;
         }
+        public void setParet(table_module_day value)
+        {
+            parent = value;
+            parent.triggerDispose += switchDispose;
+        }
         /// </setValue>
 
         public Class_box()
         {
             InitializeComponent();
-            
             
         }
 
@@ -134,15 +139,18 @@ namespace Testing_Form.Controls
 
         }
 
+        public event EventHandler onClassUpdate;
+
         private void updateClass(object sender, EventArgs e)
         {
-            subcode = dbcmd.getData("SELECT `fk_subject` FROM `tbl_class` WHERE `panel_name` = '"+ panelname + "' ");
-            instructor = dbcmd.getData("SELECT `fk_instructor` FROM `tbl_class` WHERE `panel_name` = '" + panelname + "' ");
-            start_time = dbcmd.getData("SELECT `fk_time` FROM `tbl_class` WHERE `panel_name` = '" + panelname + "' ");
-            end_time = dbcmd.getData("SELECT `fk_etime` FROM `tbl_class` WHERE `panel_name` = '" + panelname + "' ");
-            room = dbcmd.getData("SELECT `fk_room` FROM `tbl_class` WHERE `panel_name` = '" + panelname + "' ");
+            onClassUpdate?.Invoke(this,EventArgs.Empty);
+            this.Dispose();
+        }        
 
 
+        private void switchDispose(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)

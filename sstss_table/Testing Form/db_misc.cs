@@ -45,82 +45,7 @@ namespace db_misc
             return data;
         }
 
-        /// </universal>
-        public ArrayList getInsDD()
-        {
-            ArrayList list = new ArrayList();
-            MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=sstss_data;password=sstssthor");
-            try
-            {
-                string stm = "SELECT CONCAT(`last_name`,\", \",`first_name`,\" \",`middle_name`) FROM `tbl_instrctr`";
-                conn.Open();
-                MySqlCommand cmd = new MySqlCommand(stm, conn);
-                MySqlDataReader dr = cmd.ExecuteReader(); ;
-                list.Clear();
-                while (dr.Read())
-                {
-                    list.Add(Convert.ToString(dr[0]));
-
-                }
-                conn.Close();
-            }
-            catch(MySqlException ex)
-            {
-                Console.WriteLine("Error: {0}", ex.ToString());
-            }
-
-            return list;
-        }
-
-        public ArrayList getRoomDD()
-        {
-            ArrayList list = new ArrayList();
-            MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=sstss_data;password=sstssthor");
-            try
-            {
-                string stm = "SELECT * FROM `tbl_room`";
-                conn.Open();
-                MySqlCommand cmd = new MySqlCommand(stm, conn);
-                MySqlDataReader dr = cmd.ExecuteReader(); ;
-                list.Clear();
-                while (dr.Read())
-                {
-                    list.Add(dr["description"]);
-
-                }
-                conn.Close();
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine("Error: {0}", ex.ToString());
-            }
-
-            return list;
-        }
-        public ArrayList getStimeDD()
-        {
-            ArrayList list = new ArrayList();
-            MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=sstss_data;password=sstssthor");
-            try
-            {
-                string stm = "SELECT TIME_FORMAT(`time`, '%h:%i') FROM `tbl_time`";
-                conn.Open();
-                MySqlCommand cmd = new MySqlCommand(stm, conn);
-                MySqlDataReader dr = cmd.ExecuteReader(); ;                
-                while (dr.Read())
-                {
-                    list.Add(Convert.ToString(dr[0]));
-
-                }
-                conn.Close();
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine("Error: {0}", ex.ToString());
-            }
-
-            return list;
-        }
+        /// </universal>       
 
         public ArrayList getValues(String query)
         {
@@ -138,7 +63,7 @@ namespace db_misc
                     for (int i=0;i< dataReader.VisibleFieldCount; i++)
                     {
                         temp[i] = Convert.ToString(dataReader[i]);
-                        Console.WriteLine(temp[i]);
+                        //Console.WriteLine(temp[i]);
                     }
                     list.Add(temp);
                 }
@@ -154,6 +79,38 @@ namespace db_misc
             return list;
         }
 
+
+        public ArrayList getIntValues(String query)
+        {
+            ArrayList list = new ArrayList();
+            MySqlConnection conn = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=sstss_data;password=sstssthor");
+            try
+            {
+                conn.Open();
+                string stm = query;
+                MySqlCommand cmd = new MySqlCommand(stm, conn);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    int[] temp = new int[dataReader.VisibleFieldCount];
+                    for (int i = 0; i < dataReader.VisibleFieldCount; i++)
+                    {
+                        temp[i] = Convert.ToInt32(dataReader[i]);
+                        //Console.WriteLine(temp[i]);
+                    }
+                    list.Add(temp);
+                }
+
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Connection Failed!");
+                Console.WriteLine(e.Message);
+            }
+            conn.Close();
+            return list;
+        }
 
 
 

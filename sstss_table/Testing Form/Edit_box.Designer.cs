@@ -37,8 +37,6 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.start_time_dropdown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.room_dropdown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.end_time_dropdown = new Bunifu.UI.WinForms.BunifuDropdown();
@@ -66,8 +64,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.start_time_dropdown);
             this.panel1.Controls.Add(this.room_dropdown);
             this.panel1.Controls.Add(this.end_time_dropdown);
@@ -81,22 +77,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(331, 318);
             this.panel1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(245, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "label1";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(-19, -19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 20;
             // 
             // start_time_dropdown
             // 
@@ -158,6 +138,7 @@
             this.room_dropdown.TabIndex = 18;
             this.room_dropdown.Text = "Room";
             this.room_dropdown.DropDown += new System.EventHandler(this.room_dropdown_DropDown);
+            this.room_dropdown.SelectedValueChanged += new System.EventHandler(this.room_dropdown_SelectedValueChanged);
             // 
             // end_time_dropdown
             // 
@@ -188,6 +169,8 @@
             this.end_time_dropdown.Size = new System.Drawing.Size(100, 21);
             this.end_time_dropdown.TabIndex = 17;
             this.end_time_dropdown.Text = "Ending Time";
+            this.end_time_dropdown.DropDown += new System.EventHandler(this.end_time_dropdown_DropDown);
+            this.end_time_dropdown.SelectedIndexChanged += new System.EventHandler(this.end_time_dropdown_SelectedIndexChanged);
             // 
             // instructor_dropdown
             // 
@@ -218,6 +201,7 @@
             this.instructor_dropdown.TabIndex = 16;
             this.instructor_dropdown.Text = "Instructor";
             this.instructor_dropdown.DropDown += new System.EventHandler(this.instructor_dropdown_DropDown);
+            this.instructor_dropdown.SelectedValueChanged += new System.EventHandler(this.instructor_dropdown_TextChanged);
             // 
             // subject_code_display
             // 
@@ -400,7 +384,6 @@
             this.Text = "Edit_box";
             this.gunaShadowPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -416,8 +399,6 @@
         private Guna.UI.WinForms.GunaLineTextBox subject_code_display;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton button_discard;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton button_save;
-        private System.Windows.Forms.TextBox textBox1;
         private Bunifu.Framework.UI.BunifuMetroTextbox subject_code_textbox;
-        private System.Windows.Forms.Label label1;
     }
 }
