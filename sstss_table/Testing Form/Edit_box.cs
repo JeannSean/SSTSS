@@ -177,16 +177,27 @@ namespace Testing_Form
 
         private void room_dropdown_DropDown(object sender, EventArgs e)
         {
-            room_dropdown.Items.Clear();
-            foreach (string[] arStr in dbcmd.getValues("SELECT `description` FROM `tbl_room` ORDER BY `description` ASC"))
+            room_dropdown.Items.Clear();            
+            foreach (string s in roomAvailable())
             {
-                foreach (string s in arStr)
+                //Console.WriteLine(strdata);
+                room_dropdown.Items.Add(s);
+            }           
+        }
+
+        private ArrayList roomAvailable()
+        {
+            ArrayList roomlist = new ArrayList(),
+                occupeidroom = dbcmd.getValues("SELECT `fk_room` FROM `sstss_data`.`tbl_class` WHERE (`fk_time` >= '"+start_time+"'AND `fk_time` <= '"+end_time+ "') OR (`fk_etime` >='" + start_time + "'AND `fk_etime` <='" + end_time + "')");
+            foreach (string[] elem in dbcmd.getValues("SELECT `description` FROM `sstss_data`.`tbl_room`"))
+            {
+                foreach (string s in elem)
                 {
-                    //Console.WriteLine(strdata);
-                    room_dropdown.Items.Add(s);
+                    roomlist.Add(s);
                 }
             }
 
+            return roomlist;
         }
 
         private void start_time_dropdown_DropDown(object sender, EventArgs e)
@@ -216,10 +227,10 @@ namespace Testing_Form
         private ArrayList sortSTime()
         {
             ArrayList baselist = new ArrayList(),
-                      occupiedtime = dbcmd.getIntValues("SELECT `fk_time`,`fk_etime` FROM `sstss_data`.`tbl_class` WHERE `class_id`= " + section),
+                      occupiedtime = dbcmd.getIntValues("SELECT `fk_time`,`fk_etime` FROM `sstss_data`.`tbl_class` WHERE `fk_day` = '"+day+ "' AND  `class_id`= " + section),
                       temp = new ArrayList();
             //dbcmd.getIntValues("SELECT `fk_etime` FROM `sstss_data`.`tbl_class` WHERE `class_id`= " + section)            
-            foreach (int[] elem in dbcmd.getIntValues("SELECT `fk_time`,`fk_etime` FROM `sstss_data`.`tbl_class` WHERE `fk_instructor`= '" + instructor+"' AND `class_id` != " + section))
+            foreach (int[] elem in dbcmd.getIntValues("SELECT `fk_time`,`fk_etime` FROM `sstss_data`.`tbl_class` WHERE `fk_day` = '" + day + "' AND  `fk_instructor`= '" + instructor+"' AND `class_id` != " + section))
             {                
                 occupiedtime.Add(elem);
             }
@@ -230,13 +241,18 @@ namespace Testing_Form
                     temp.Add(it);
                 }
             }
+
+            
             foreach (int[] elem in occupiedtime)
             {
                 for (int i = elem[0];i<=elem[1];i++)
                 {
-                    temp.Remove(i); 
+                    if (start_time != null && start_time.Equals(""+i))
+                        goto thisloop;
+                    temp.Remove(i);
+                    //Console.WriteLine(i);
                 }
-            }
+            }thisloop:
             foreach (int s in temp)
             {
                 if(temp.Contains(s + 3) )
@@ -251,10 +267,10 @@ namespace Testing_Form
         {
             int srtime = Convert.ToInt32(start_time);
             ArrayList baselist = new ArrayList(),
-                      occupiedtime = dbcmd.getIntValues("SELECT `fk_time`,`fk_etime` FROM `sstss_data`.`tbl_class` WHERE `class_id`= " + section),
+                      occupiedtime = dbcmd.getIntValues("SELECT `fk_time`,`fk_etime` FROM `sstss_data`.`tbl_class` WHERE `fk_day` = '" + day + "' AND   `class_id`= " + section),
                       temp = new ArrayList();
             //dbcmd.getIntValues("SELECT `fk_etime` FROM `sstss_data`.`tbl_class` WHERE `class_id`= " + section)            
-            foreach (int[] elem in dbcmd.getIntValues("SELECT `fk_time`,`fk_etime` FROM `sstss_data`.`tbl_class` WHERE `fk_instructor`= '" + instructor + "' AND `class_id` != " + section))
+            foreach (int[] elem in dbcmd.getIntValues("SELECT `fk_time`,`fk_etime` FROM `sstss_data`.`tbl_class` WHERE `fk_day` = '" + day + "' AND   `fk_instructor`= '" + instructor + "' AND `class_id` != " + section))
             {
                 occupiedtime.Add(elem);
             }
@@ -269,22 +285,20 @@ namespace Testing_Form
             {
                 for (int i = elem[0]; i <= elem[1]; i++)
                 {
+                    if (start_time != null && start_time.Equals(""+i))
+                        goto thisloop;
                     temp.Remove(i);
                 }
-            }
+            }thisloop:
             foreach (int s in temp)
             {
-                if (s > srtime)
+                if (s > srtime+1)
                 {
                     //Console.WriteLine(s);
-                    if (s >= srtime + 2 && !temp.Contains(s + 1))
+                    baselist.Add(dbcmd.getData("SELECT TIME_FORMAT(`time`, '%h:%i') FROM `sstss_data`.`tbl_time` WHERE `time_id` = '" + s + "'"));                    
+                    if (!temp.Contains(s + 1))
                     {
                         break;
-                    }
-                    if (s>srtime+2)
-                    {
-                        //Console.WriteLine(s);
-                        baselist.Add(dbcmd.getData("SELECT TIME_FORMAT(`time`, '%h:%i') FROM `sstss_data`.`tbl_time` WHERE `time_id` = '" + s + "'"));
                     }
                 }
             }
